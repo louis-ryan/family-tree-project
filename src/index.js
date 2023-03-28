@@ -12,24 +12,44 @@ import Graph from './Graph';
 import './sass/style.scss';
 
 // GEDOM files
-import halflingFile from './gedcoms/halfling.ged';
-import kennedyFile from './gedcoms/kennedy.ged';
-import shakespeareFile from './gedcoms/shakespeare.ged';
-import tudorFile from './gedcoms/tudors.ged';
-import gotFile from './gedcoms/GOT.ged';
-import kardashianFile from './gedcoms/kardashian.ged';
+import gedcomFile from './gedcoms/editedtree.ged';
+import realGedcomFile from './gedcoms/tree.ged';
 
 const App = () => {
 
+  const [actualData, setActualData] = useState({})
+
   const [showingRoots, setShowingRoots] = useState(false);
   const [d3Data, setD3Data] = useState([]);
+  console.log("data: ", d3Data)
   const [showError, setShowError] = useState(false);
   const [timelineShowing, setTimelineShowing] = useState(false);
   const [highlightedFamily, setHighlightedFamily] = useState();
   const [hoveredNode, setHoveredNode] = useState(null);
 
+
+  // useEffect(() => {
+  //   var realTree = d3ize(parse(realGedcomFile))
+
+  //   var newNodes = realTree.nodes.slice(0,40)
+
+  //   // console.log("nodes: ", newNodes)
+
+  //   realTree.nodes = newNodes
+
+  //   console.log("new real: ", realTree)
+
+  //   setActualData(realTree)
+
+
+  // })
+
+
+
   const readFile = file => {
-    setD3Data(d3ize(parse(file)));  // Parse data
+    const newData = d3ize(parse(file))
+    console.log("new data: ", newData)
+    setD3Data(newData);  // Parse data
     setShowingRoots(true);
     setShowError(false);
   }
@@ -45,7 +65,7 @@ const App = () => {
     const parts = file.name.split('.');
     const reader = new FileReader(file);
 
-    if (parts[parts.length -1].toLowerCase() === 'ged') {
+    if (parts[parts.length - 1].toLowerCase() === 'ged') {
       reader.onloadend = () => {
         readFile(reader.result);
       }
@@ -56,19 +76,15 @@ const App = () => {
     }
   }
 
-  return(
+  useEffect(() => {
+    readFile(gedcomFile)
+  }, [])
+
+
+  return (
     <>
       {!showingRoots ?
-        <Load
-          handleUpload={handleUpload}
-          loadHalfling={() => readFile(halflingFile)}
-          loadKennedy={() => readFile(kennedyFile)}
-          loadShakespeare={() => readFile(shakespeareFile)}
-          loadTudor={() => readFile(tudorFile)}
-          loadGOT={() => readFile(gotFile)}
-          loadKardashian={() => readFile(kardashianFile)}
-          showError={showError}
-        /> :
+        <></> :
         <>
           <Controls
             d3Data={d3Data}

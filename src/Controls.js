@@ -71,9 +71,9 @@ const Controls = ({ d3Data, closeRoots, setTimelineShowing, highlightedFamily, s
 
   return (
     <div id='controls'>
-      <div id="back-button" onClick={closeRoots}>
+      {/* <div id="back-button" onClick={closeRoots}>
         <i className="fa fa-times" aria-hidden="true"></i>
-      </div>
+      </div> */}
 
       <div id="legend">
         {showingLegend &&

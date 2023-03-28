@@ -20,7 +20,7 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
 
   // Manage force
   useEffect(() => {
-    fgRef.current.d3Force('collide', forceCollide(55));
+    fgRef.current.d3Force('collide', forceCollide(100));
   });
 
   // Resize window
