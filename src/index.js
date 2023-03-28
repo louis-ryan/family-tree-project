@@ -13,7 +13,6 @@ import './sass/style.scss';
 
 // GEDOM files
 import gedcomFile from './gedcoms/editedtree.ged';
-import realGedcomFile from './gedcoms/tree.ged';
 
 const App = () => {
 
