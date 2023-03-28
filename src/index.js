@@ -12,11 +12,11 @@ import Graph from './Graph';
 import './sass/style.scss';
 
 // GEDOM files
-import gedcomFile from './gedcoms/editedtree.ged';
+import gedcomFile from './gedcoms/editedTree.ged';
 
 const App = () => {
 
-  
+
 
   const [showingRoots, setShowingRoots] = useState(false);
   const [d3Data, setD3Data] = useState([]);
