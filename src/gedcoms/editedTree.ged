@@ -214,6 +214,32 @@
 2 TYPE Degrees/Leters
 2 PLAC B.Sc.
 1 FAMC @F0010@
+0 @I01969@ INDI
+1 NAME Jessica Anne /Wilcox/
+1 SEX F
+1 BIRT
+2 DATE 9 OCT 1997
+2 PLAC St Leonards  NSW  Australia
+1 EVEN
+2 TYPE Birth Detail
+2 PLAC Born at Royal North Shore Hospital
+1 OCCU
+2 PLAC Primary School Teacher
+1 EVEN
+2 TYPE Degrees/Leters
+2 PLAC B.Prim.Ed
+- 1 FAMS @F3458@
+1 FAMC @F0010@
+0 @I04683@ INDI
+1 NAME Nicholas John /Wilcox/
+1 SEX M
+1 BIRT
+2 DATE 3 AUG 1999
+2 PLAC St Leonards  NSW  Australia
+1 EVEN
+2 TYPE Birth Detail
+2 PLAC Born at Royal North Shore Private Hospital
+1 FAMC @F0010@
 
 0 @F0009@ FAM
 1 HUSB @I00022@
@@ -231,7 +257,8 @@
 1 HUSB @I00006@
 1 WIFE @I00025@
 1 CHIL @I00026@
-
+1 CHIL @I01969@
+1 CHIL @I04683@
 1 MARR
 2 DATE 7 FEB 1992
 2 PLAC Roseville  NSW  Australia
