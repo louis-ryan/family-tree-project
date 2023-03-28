@@ -16,6 +16,8 @@ import gedcomFile from './gedcoms/editedtree.ged';
 
 const App = () => {
 
+  
+
   const [showingRoots, setShowingRoots] = useState(false);
   const [d3Data, setD3Data] = useState([]);
   console.log("data: ", d3Data)
