@@ -15,6 +15,7 @@ import './sass/style.scss';
 import gedcomFile from './gedcoms/editedtree.ged';
 
 const App = () => {
+
   
 
   const [showingRoots, setShowingRoots] = useState(false);
