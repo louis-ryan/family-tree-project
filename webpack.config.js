@@ -8,7 +8,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'blood lines',
+      title: 'family tree app',
       template: "./src/index.html",
       favicon: "./src/img/logo.png"
     })
