@@ -1,0 +1,420 @@
+0 HEAD
+1 SOUR MYAPP
+2 VERS 1.0
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+
+0 @I00001@ INDI
+1 NAME Graham John Rutledge Wilcox /Sydney/
+1 SEX M
+1 BIRT
+2 DATE 17 JUL 1942
+2 PLAC Surry Hills  NSW  Australia
+2 SOUR Birth Certificate on file
+1 EVEN
+2 TYPE Birth Detail
+2 PLAC Born at Crown St Hospital
+1 OCCU
+2 PLAC Retired Real Estate Agent
+1 ADDR Apartment 16 Nantucket
+2 CONT 45 Phillips Street
+2 CONT Cabarita
+2 CONT NSW
+2 CONT 2137
+2 CONT Australia
+1 PHON (02) 8765 1112  wilcox@@bigpond.net.au
+1 FAMC @FROM-sydney@
+
+0 @oma@ INDI
+1 NAME Johanna Cornelia Kleingeld /Den-Haag/
+1 SEX F
+1 BIRT
+2 DATE 11 JUL 1942
+2 PLAC 's-Gravenhage  Holland
+2 SOUR Birth Certificate on file
+1 EVEN
+2 TYPE Ship Arrival
+2 PLAC Arr Sydney on "Johan van Oldenbarnevelt"  21 Jan 1951
+1 EVEN
+2 TYPE Citizenship Note
+2 PLAC Naturalised as Australian citizen 3 Oct 1957
+2 SOUR Naturalization Certificate on file
+1 OCCU
+2 PLAC Social Services
+1 FAMC @FROM-sydney@
+1 FAMC @FROM-den-haag@
+1 NOTE @NI00002@
+0 @NI00002@ NOTE
+1 CONC Johanna was born while the family lived at Altingstraat 14, s'Gravenhage 
+1 CONC (Den Haag).  At the time her father, Jan was held in a German Labour 
+1 CONC Camp.  In 1944 it was considered too dangerous for her to remain in Den 
+1 CONC Haag so she lived with her grandfather in Heiloo. 
+
+0 @andrew wilcox@ INDI
+1 NAME Andrew Ian Wilcox /Melbourne/
+1 SEX M
+1 BIRT
+2 DATE 18 JUN 1965
+2 PLAC Melbourne  Victoria  Australia
+2 SOUR Birth Certificate on file
+1 EVEN
+2 TYPE Birth Detail
+2 PLAC Born at St Andrews Hospital
+2 SOUR Birth Certificate on file
+1 OCCU
+2 PLAC Fundraising Manager, NSW Police Legacy
+1 EVEN
+2 TYPE Degrees/Leters
+2 PLAC B.A. (Syd Uni)
+1 PHON andrew@@cryogyny.com
+1 FAMC @FROM-melbourne@
+1 FAMC @FROM-sydney@
+
+0 @I00004@ INDI
+1 NAME Michelle Yvonne Wilcox /Sydney/
+1 SEX F
+1 BIRT
+2 DATE 7 OCT 1966
+2 PLAC Launceston  Tasmania  Australia
+2 SOUR Birth Certificate on file
+1 BIRT
+2 DATE 7 OCT 1966
+1 EVEN
+2 TYPE Birth Detail
+2 PLAC Born at Queen Victoria Hospital
+2 SOUR Birth Certificate on file
+1 OCCU
+2 PLAC Solicitor
+1 EVEN
+2 TYPE Degrees/Leters
+2 PLAC Dip Law, GDLP
+1 ADDR 1/6 Kenwick Lane
+2 CONT Beecroft
+2 CONT NSW
+2 CONT 2119
+2 CONT Australia
+1 PHON (02) 9484 7872 Michelle 0408 696 185  Martin 0409 903 706 gosies@@bigpond.net.au
+1 FAMC @FROM-sydney@
+
+0 @I00005@ INDI
+1 NAME Euan David Wilcox /Sydney/
+1 SEX M
+1 BIRT
+2 DATE 19 JUL 1968
+2 PLAC Launceston  Tasmania  Australia
+2 SOUR Birth Certificate on file
+1 EVEN
+2 TYPE Birth Detail
+2 PLAC Born at Queen Victoria Hospital
+2 SOUR Birth Certificate on file
+1 OCCU
+2 PLAC Alpaca Farmer
+1 EVEN
+2 TYPE Degrees/Leters
+2 PLAC BSc (Arch), MBA
+1 FAMC @FROM-sydney@
+
+0 @I06092@ INDI
+1 NAME (Dani) Daniela Angela Riccio /Sydney/
+1 SEX F
+1 BIRT
+2 DATE 1 NOV 1969
+2 PLAC Newtown  NSW  Australia
+1 OCCU
+2 PLAC Alpaca Farmer
+1 FAMC @FROM-sydney@
+
+0 @I00006@ INDI
+1 NAME Sean Michael Wilcox /Sydney/
+1 SEX M
+1 BIRT
+2 DATE 27 OCT 1970
+2 PLAC Launceston  Tasmania  Australia
+2 SOUR Birth Certificate on file
+1 EVEN
+2 TYPE Birth Detail
+2 PLAC Born at Queen Victoria Hospital
+2 SOUR Birth Certificate on file
+1 OCCU
+2 PLAC Business Development Manager in Commercial Interiors
+1 ADDR 56 Kooringal Avenue
+2 CONT Thornleigh
+2 CONT NSW
+2 CONT 2120
+2 CONT Australia
+1 PHON (02) 9980 2475  sean_wilcox@@hotmail.com
+1 FAMC @FROM-sydney@
+
+
+0 @I00022@ INDI
+1 NAME Martin Graham Gosewinckel /Sydney/
+1 SEX M
+1 BIRT
+2 DATE 22 NOV 1965
+2 PLAC Sydney  NSW  Australia
+1 BIRT
+2 DATE 22 NOV 1965
+1 OCCU
+2 PLAC Motor Equipment Service Contractor
+1 FAMS @FROM-sydney@
+
+0 @I00023@ INDI
+1 NAME Natasha Marie Gosewinckel /Sydney/
+1 SEX F
+1 BIRT
+2 DATE 29 MAR 1990
+2 PLAC Surry Hills  NSW  Australia
+1 OCCU
+2 PLAC Horse trainer
+1 EVEN
+2 TYPE Interesting Fact
+2 PLAC At her marriage took the surname of Daly
+1 FAMC @FROM-sydney@
+
+0 @alex gos@ INDI
+1 NAME Alexander Graham Harrison Gosewinckel /Sydney/
+1 SEX M
+1 BIRT
+2 DATE 27 DEC 1991
+2 PLAC Surry Hills  NSW  Australia
+1 OCCU
+2 PLAC Environmental Economist
+1 EVEN
+2 TYPE Degrees/Leters
+2 PLAC BA Econ (Macquarie Uni), MA Environ. Policy & Planning (Berlin) 
+1 FAMC @FROM-sydney@
+1 FAMC @FROM-berlin@
+1 FAMS @STORY-east-europe@
+
+0 @I10262@ INDI
+1 NAME Scheina Yelena Gonzalez Duran /Colombia/
+1 SEX F
+1 BIRT
+2 DATE 20 JAN 1988
+2 PLAC Fundacion  Magdalena  Colombia
+1 EVEN
+2 TYPE Degrees/Leters
+2 PLAC MA Biomedical Engineering
+1 FAMC @FROM-sydney@
+
+0 @I10454@ INDI
+1 NAME Laila Johanna Gonzalez Gosewinkel /Sydney/
+1 SEX F
+1 BIRT
+2 DATE 24 JUN 2022
+2 PLAC St Leonards  NSW  Australia
+1 FAMC @FROM-sydney@
+
+0 @I00025@ INDI
+1 NAME Lisa Marie Thorn /Sydney/
+1 SEX F
+1 BIRT
+2 DATE 28 JUL 1970
+2 PLAC North Sydney  NSW  Australia
+1 OCCU
+2 PLAC Nursing Sister
+1 EVEN
+2 TYPE Degrees/Leters
+2 PLAC RN
+1 FAMS @FROM-sydney@
+
+0 @I00026@ INDI
+1 NAME Benjamin John Wilcox /Sydney/
+1 SEX M
+1 BIRT
+2 DATE 31 AUG 1995
+2 PLAC Surry Hills  NSW  Australia
+1 EVEN
+2 TYPE Birth Detail
+2 PLAC Born at St Margarets Hospital
+1 OCCU
+2 PLAC Laboratory Technician
+1 EVEN
+2 TYPE Degrees/Leters
+2 PLAC B.Sc.
+1 FAMC @FROM-sydney@
+
+0 @I01969@ INDI
+1 NAME Jessica Anne Wilcox /Sydney/
+1 SEX F
+1 BIRT
+2 DATE 9 OCT 1997
+2 PLAC St Leonards  NSW  Australia
+1 EVEN
+2 TYPE Birth Detail
+2 PLAC Born at Royal North Shore Hospital
+1 OCCU
+2 PLAC Primary School Teacher
+1 EVEN
+2 TYPE Degrees/Leters
+2 PLAC B.Prim.Ed
+- 1 FAMS @F3458@
+1 FAMC @FROM-sydney@
+
+0 @I04683@ INDI
+1 NAME Nicholas John Wilcox /Sydney/
+1 SEX M
+1 BIRT
+2 DATE 3 AUG 1999
+2 PLAC St Leonards  NSW  Australia
+1 EVEN
+2 TYPE Birth Detail
+2 PLAC Born at Royal North Shore Private Hospital
+1 FAMC @FROM-sydney@
+
+0 @louis ryan@ INDI
+1 NAME Louis Simon Ryan Wilcox /Sydney/
+1 SEX M
+1 BIRT
+2 DATE 12 DEC 1989
+2 PLAC Paddington  NSW  Australia
+1 EVEN
+2 TYPE Ship Arrival
+2 PLAC Home City: Berlin
+1 EVEN
+2 TYPE Interesting Fact
+2 PLAC Changed his name in 2003 to Louis Simon Wilcox Ryan
+1 EVEN
+2 TYPE Interesting Fact
+2 PLAC Home City: Berlin
+1 EVEN
+2 TYPE Degrees/Leters
+2 PLAC BA (ANU), M.Design (RMIT)
+1 IMMI
+2 PLAC Home City: Berlin
+1 ADDR 12/99 New South Head Road
+2 CONT Edgecliff
+2 CONT NSW
+2 CONT 2027
+2 CONT Australia
+1 PHON (02) 363 0236  pipryan@@ozemail.com.au
+1 FAMC @FROM-sydney@
+1 FAMC @FROM-melbourne@
+1 FAMC @FROM-berlin@
+1 FAMS @STORY-east-europe@
+
+0 @I00020@ INDI
+1 NAME Philippa Ann Ryan /Caracas/
+1 SEX F
+1 TITL Ms
+1 BIRT
+2 DATE 15 SEP 1965
+2 PLAC Caracas  Venezuela
+1 OCCU
+2 PLAC Barrister-at-Law at ANU College of Law
+1 EVEN
+2 TYPE Degrees/Leters
+2 PLAC BA, LLB(Hons), Master Ed, PhD(Law)
+1 EVEN
+2 TYPE Title (Facts Pg)
+2 PLAC Associate Professor Dr
+1 ADDR 8 Hopewell Street
+2 CONT Paddington
+2 CONT NSW
+2 CONT 2021
+2 CONT Australia
+1 PHON (02) 9357 4380   pipryan@@ozemail.com.au
+1 FAMS @FROM-sydney@
+
+
+-LOCATIONS
+
+-Australia
+0 @australia@ INDI
+1 NAME AUSTRALIA /AUS/
+1 FAMS @cities-IN-australia@
+
+-Europe
+0 @europe@ INDI
+1 NAME EUROPE /EU/
+1 FAMS @cities-IN-europe@
+
+-Sydney
+0 @sydney@ INDI
+1 NAME SYDNEY /AUS/
+1 FAMC @cities-IN-australia@
+1 FAMS @FROM-sydney@
+
+-Melbourne
+0 @melbourne@ INDI
+1 NAME MELBOURNE /AUS/
+1 FAMC @cities-IN-australia@
+1 FAMS @FROM-melbourne@
+
+-Berlin
+0 @berlin@ INDI
+1 NAME BERLIN /EU/
+1 FAMC @cities-IN-europe@
+1 FAMS @FROM-berlin@
+
+-Den-Haag
+0 @den-haag@ INDI
+1 NAME DEN-HAAG /EU/
+1 FAMC @cities-IN-europe@
+1 FAMS @FROM-den-haag@
+
+
+
+-CONNECTIONS
+-PLACES
+-Cities in Australia
+0 @cities-IN-australia@ FAM
+1 HUSB @australia@
+1 CHIL @sydney@
+1 CHIL @melbourne@
+
+-Cities in Europe
+0 @cities-IN-europe@ FAM
+1 HUSB @europe@
+1 CHIL @berlin@
+1 CHIL @den-haag@
+
+- Sydney ppl
+0 @FROM-sydney@ FAM
+1 HUSB @sydney@
+1 CHIL @I00001@
+1 CHIL @oma@
+1 CHIL @andrew wilcox@
+1 CHIL @I00004@
+1 CHIL @I00005@
+1 CHIL @I00006@
+1 CHIL @I06092@
+1 CHIL @I00022@
+1 CHIL @I00023@
+1 CHIL @alex gos@
+1 CHIL @I00025@
+1 CHIL @I00026@
+1 CHIL @I01969@
+1 CHIL @I04683@
+1 CHIL @louis ryan@
+1 CHIL @I00020@
+1 CHIL @I10262@
+1 CHIL @I10454@
+
+- Melbourne ppl
+0 @FROM-melbourne@ FAM
+1 HUSB @melbourne@
+1 CHIL @louis ryan@
+1 CHIL @andrew wilcox@
+
+- Berlin ppl
+0 @FROM-berlin@ FAM
+1 HUSB @berlin@
+1 CHIL @louis ryan@
+1 CHIL @alex gos@
+
+- Den-Haag ppl
+0 @FROM-den-haag@ FAM
+1 HUSB @den-haag@
+1 CHIL @oma@
+
+
+
+-STORIES
+- East Europe
+0 @STORY-east-europe@ FAM
+1 HUSB @alex gos@
+1 WIFE @louis ryan@
+1 MARR

@@ -11,7 +11,8 @@ import Graph from './Graph';
 import './sass/style.scss';
 
 // GEDOM files
-import gedcomFile from './gedcoms/editedTree.ged';
+import geneFile from './gedcoms/editedTree.ged';
+import storyFile from './gedcoms/storyTree.ged';
 
 const App = () => {
 
@@ -20,19 +21,37 @@ const App = () => {
   const [timelineShowing, setTimelineShowing] = useState(false);
   const [highlightedFamily, setHighlightedFamily] = useState();
   const [hoveredNode, setHoveredNode] = useState(null);
+  const [view, setView] = useState('GENE')
 
 
-  const readFile = file => {
+
+  const readFile = (file) => {
     const newData = d3ize(parse(file))
-    console.log("new data: ", newData)
     setD3Data(newData);  // Parse data
     setShowingRoots(true);
   }
 
 
   useEffect(() => {
-    readFile(gedcomFile)
-  }, [])
+
+    switch (view) {
+      case 'GENE':
+        readFile(geneFile)
+        setHoveredNode(null)
+        setHighlightedFamily(null)
+        break
+      case 'LOCA':
+        readFile(storyFile)
+        setHoveredNode(null)
+        setHighlightedFamily(null)
+        break
+      default:
+        readFile(geneFile)
+        setHoveredNode(null)
+        setHighlightedFamily(null)
+    }
+
+  }, [view])
 
 
   return (
@@ -42,17 +61,19 @@ const App = () => {
         <>
           <Controls
             d3Data={d3Data}
-            closeRoots={() => {}}
             setTimelineShowing={setTimelineShowing}
             highlightedFamily={highlightedFamily}
             setHighlightedFamily={setHighlightedFamily}
             hoveredNode={hoveredNode}
+            view={view}
+            setView={setView}
           />
           <Graph
             d3Data={d3Data}
             highlightedFamily={highlightedFamily}
             setHighlightedFamily={setHighlightedFamily}
             setHoveredNode={setHoveredNode}
+            view={view}
           />
         </>
       }

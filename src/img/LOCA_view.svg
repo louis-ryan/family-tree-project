@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>LOCA_view</title>
+    <desc>Created with Sketch.</desc>
+    <g id="LOCA_view" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" stroke="#979797" cx="28.5" cy="28.5" r="28"></circle>
+        <line x1="28.5" y1="0.5" x2="28.5" y2="57.5" id="Line-4" stroke="#979797" stroke-linecap="square"></line>
+        <path d="M29,0 C37.6666667,9.86666503 42,19.5333317 42,29 C42,38.4666683 37.6666667,47.8000016 29,57" id="Line-4-Copy" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M29,0 C45,8 53,17.6666667 53,29 C53,40.3333333 45,49.6666667 29,57" id="Line-4-Copy-2" stroke="#979797" stroke-linecap="square"></path>
+        <path d="M4,0 C20,8 28,17.6666667 28,29 C28,40.3333333 20,49.6666667 4,57" id="Line-4-Copy-2" stroke="#979797" stroke-linecap="square" transform="translate(16.000000, 28.500000) scale(-1, 1) translate(-16.000000, -28.500000) "></path>
+        <path d="M15,0 C23.6666667,9.86666503 28,19.5333317 28,29 C28,38.4666683 23.6666667,47.8000016 15,57" id="Line-4-Copy" stroke="#979797" stroke-linecap="square" transform="translate(21.500000, 28.500000) scale(-1, 1) translate(-21.500000, -28.500000) "></path>
+        <line x1="0.5" y1="28.5" x2="57.5" y2="28.5" id="Line-5" stroke="#979797" stroke-linecap="square"></line>
+        <line x1="3.5" y1="40.5" x2="53.5" y2="40.5" id="Line-5-Copy-2" stroke="#979797" stroke-linecap="square"></line>
+        <line x1="3.5" y1="16.5" x2="53.5" y2="16.5" id="Line-5-Copy" stroke="#979797" stroke-linecap="square"></line>
+        <line x1="10.5" y1="7.5" x2="46.5" y2="7.5" id="Line-5-Copy-3" stroke="#979797" stroke-linecap="square"></line>
+        <line x1="11.5" y1="50.5" x2="45.5" y2="50.5" id="Line-5-Copy-4" stroke="#979797" stroke-linecap="square"></line>
+    </g>
+</svg>

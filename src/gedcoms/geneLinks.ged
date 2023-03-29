@@ -1,0 +1,68 @@
+- Oma and Grumbles
+0 @F0001@ FAM
+1 HUSB @I00001@
+1 WIFE @I00002@
+1 CHIL @I00003@
+1 CHIL @I00004@
+1 CHIL @I00005@
+1 CHIL @I00006@
+1 MARR
+2 DATE 28 DEC 1963
+2 PLAC East Brighton  Victoria  Australia
+2 SOUR Marriage Certificate on file
+1 NOTE @NF0001@
+0 @NF0001@ NOTE
+1 CONC Married in Presbyterian Church, Marriage Road. The wedding was conducted 
+1 CONC by the bridegroom's father.
+
+- Mine
+0 @F0008@ FAM
+1 HUSB @I00003@
+1 WIFE @I00020@
+1 CHIL @I00021@
+1 MARR
+2 DATE 12 DEC 1987
+2 PLAC Sydney  NSW  Australia
+1 DIV
+2 DATE 2005
+1 DIV
+1 NOTE @NF0008@
+0 @NF0008@ NOTE
+1 CONC Married in the quadrangle at Sydney University
+
+- Gozzies
+0 @F0009@ FAM
+1 HUSB @I00022@
+1 WIFE @I00004@
+1 CHIL @I00023@
+1 CHIL @I00024@
+1 MARR
+2 DATE 5 MAR 1988
+2 PLAC Millers Point  NSW  Australia
+1 NOTE @NF0009@
+0 @NF0009@ NOTE
+1 CONC Married in The Garrison Anglican Church
+
+- Sean and Lisa
+0 @F0010@ FAM
+1 HUSB @I00006@
+1 WIFE @I00025@
+1 CHIL @I00026@
+1 CHIL @I01969@
+1 CHIL @I04683@
+1 MARR
+2 DATE 7 FEB 1992
+2 PLAC Roseville  NSW  Australia
+1 NOTE @NF0010@
+0 @NF0010@ NOTE
+1 CONC Married in the Anglican Church
+
+- Euan and Dani
+0 @F2027@ FAM
+1 HUSB @I00005@
+1 WIFE @I06092@
+1 MARR
+2 DATE 25 FEB 2000
+2 PLAC Sydney  NSW  Australia
+1 _FA1
+2 PLAC Pavilion-On-The-Park at the Domain

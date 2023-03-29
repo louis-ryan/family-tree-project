@@ -5,6 +5,7 @@
 2 VERS 5.5.1
 2 FORM LINEAGE-LINKED
 1 CHAR UTF-8
+
 0 @I00001@ INDI
 1 NAME Graham John Rutledge /Wilcox/
 1 SEX M
@@ -25,6 +26,7 @@
 2 CONT Australia
 1 PHON (02) 8765 1112  wilcox@@bigpond.net.au
 1 FAMS @F0001@
+
 0 @I00002@ INDI
 1 NAME Johanna Cornelia /Kleingeld/
 1 SEX F
@@ -49,7 +51,6 @@
 1 CONC Camp.  In 1944 it was considered too dangerous for her to remain in Den 
 1 CONC Haag so she lived with her grandfather in Heiloo. 
 
-
 0 @I00003@ INDI
 1 NAME Andrew Ian /Wilcox/
 1 SEX M
@@ -68,6 +69,7 @@
 2 PLAC B.A. (Syd Uni)
 1 PHON andrew@@cryogyny.com
 1 FAMC @F0001@
+
 0 @I00004@ INDI
 1 NAME Michelle Yvonne /Wilcox/
 1 SEX F
@@ -94,6 +96,7 @@
 1 PHON (02) 9484 7872 Michelle 0408 696 185  Martin 0409 903 706 gosies@@bigpond.net.au
 1 FAMS @F0009@
 1 FAMC @F0001@
+
 0 @I00005@ INDI
 1 NAME Euan David /Wilcox/
 1 SEX M
@@ -110,7 +113,20 @@
 1 EVEN
 2 TYPE Degrees/Leters
 2 PLAC BSc (Arch), MBA
+1 FAMS @F2027@
 1 FAMC @F0001@
+
+0 @I06092@ INDI
+1 NAME (Dani) Daniela Angela /Riccio/
+1 SEX F
+1 BIRT
+2 DATE 1 NOV 1969
+2 PLAC Newtown  NSW  Australia
+1 OCCU
+2 PLAC Alpaca Farmer
+1 FAMS @F2027@
+- 1 FAMC @F2028@
+
 0 @I00006@ INDI
 1 NAME Sean Michael /Wilcox/
 1 SEX M
@@ -145,6 +161,7 @@
 1 OCCU
 2 PLAC Motor Equipment Service Contractor
 1 FAMS @F0009@
+
 0 @I00023@ INDI
 1 NAME Natasha Marie /Gosewinckel/
 1 SEX F
@@ -157,6 +174,7 @@
 2 TYPE Interesting Fact
 2 PLAC At her marriage took the surname of Daly
 1 FAMC @F0009@
+
 0 @I00024@ INDI
 1 NAME Alexander Graham Harrison /Gosewinckel/
 1 SEX M
@@ -169,23 +187,26 @@
 2 TYPE Degrees/Leters
 2 PLAC BA Econ (Macquarie Uni), MA Environ. Policy & Planning (Berlin) 
 1 FAMC @F0009@
+1 FAMS @F3437@
 
+0 @I10262@ INDI
+1 NAME Scheina Yelena Gonzalez /Duran/
+1 SEX F
+1 BIRT
+2 DATE 20 JAN 1988
+2 PLAC Fundacion  Magdalena  Colombia
+1 EVEN
+2 TYPE Degrees/Leters
+2 PLAC MA Biomedical Engineering
+1 FAMS @F3437@
 
-0 @F0001@ FAM
-1 HUSB @I00001@
-1 WIFE @I00002@
-1 CHIL @I00003@
-1 CHIL @I00004@
-1 CHIL @I00005@
-1 CHIL @I00006@
-1 MARR
-2 DATE 28 DEC 1963
-2 PLAC East Brighton  Victoria  Australia
-2 SOUR Marriage Certificate on file
-1 NOTE @NF0001@
-0 @NF0001@ NOTE
-1 CONC Married in Presbyterian Church, Marriage Road. The wedding was conducted 
-1 CONC by the bridegroom's father.
+0 @I10454@ INDI
+1 NAME Laila Johanna Gonzalez /Gosewinckel/
+1 SEX F
+1 BIRT
+2 DATE 24 JUN 2022
+2 PLAC St Leonards  NSW  Australia
+1 FAMC @F3437@
 
 0 @I00025@ INDI
 1 NAME Lisa Marie /Thorn/
@@ -199,6 +220,7 @@
 2 TYPE Degrees/Leters
 2 PLAC RN
 1 FAMS @F0010@
+
 0 @I00026@ INDI
 1 NAME Benjamin John /Wilcox/
 1 SEX M
@@ -214,6 +236,7 @@
 2 TYPE Degrees/Leters
 2 PLAC B.Sc.
 1 FAMC @F0010@
+
 0 @I01969@ INDI
 1 NAME Jessica Anne /Wilcox/
 1 SEX F
@@ -230,6 +253,7 @@
 2 PLAC B.Prim.Ed
 - 1 FAMS @F3458@
 1 FAMC @F0010@
+
 0 @I04683@ INDI
 1 NAME Nicholas John /Wilcox/
 1 SEX M
@@ -241,6 +265,93 @@
 2 PLAC Born at Royal North Shore Private Hospital
 1 FAMC @F0010@
 
+0 @I00021@ INDI
+1 NAME Louis Simon Ryan /Wilcox/
+1 SEX M
+1 BIRT
+2 DATE 12 DEC 1989
+2 PLAC Paddington  NSW  Australia
+1 EVEN
+2 TYPE Ship Arrival
+2 PLAC Home City: Berlin
+1 EVEN
+2 TYPE Interesting Fact
+2 PLAC Changed his name in 2003 to Louis Simon Wilcox Ryan
+1 EVEN
+2 TYPE Interesting Fact
+2 PLAC Home City: Berlin
+1 EVEN
+2 TYPE Degrees/Leters
+2 PLAC BA (ANU), M.Design (RMIT)
+1 IMMI
+2 PLAC Home City: Berlin
+1 ADDR 12/99 New South Head Road
+2 CONT Edgecliff
+2 CONT NSW
+2 CONT 2027
+2 CONT Australia
+1 PHON (02) 363 0236  pipryan@@ozemail.com.au
+1 FAMS @F3438@
+1 FAMC @F0008@
+
+0 @I00020@ INDI
+1 NAME Philippa Ann /Ryan/
+1 SEX F
+1 TITL Ms
+1 BIRT
+2 DATE 15 SEP 1965
+2 PLAC Caracas  Venezuela
+1 OCCU
+2 PLAC Barrister-at-Law at ANU College of Law
+1 EVEN
+2 TYPE Degrees/Leters
+2 PLAC BA, LLB(Hons), Master Ed, PhD(Law)
+1 EVEN
+2 TYPE Title (Facts Pg)
+2 PLAC Associate Professor Dr
+1 ADDR 8 Hopewell Street
+2 CONT Paddington
+2 CONT NSW
+2 CONT 2021
+2 CONT Australia
+1 PHON (02) 9357 4380   pipryan@@ozemail.com.au
+1 FAMS @F0008@
+- 1 FAMS @F2751@
+- 1 FAMC @F0018@
+
+- Oma and Grumbles
+0 @F0001@ FAM
+1 HUSB @I00001@
+1 WIFE @I00002@
+1 CHIL @I00003@
+1 CHIL @I00004@
+1 CHIL @I00005@
+1 CHIL @I00006@
+1 MARR
+2 DATE 28 DEC 1963
+2 PLAC East Brighton  Victoria  Australia
+2 SOUR Marriage Certificate on file
+1 NOTE @NF0001@
+0 @NF0001@ NOTE
+1 CONC Married in Presbyterian Church, Marriage Road. The wedding was conducted 
+1 CONC by the bridegroom's father.
+
+- Mine
+0 @F0008@ FAM
+1 HUSB @I00003@
+1 WIFE @I00020@
+1 CHIL @I00021@
+1 MARR
+2 DATE 12 DEC 1987
+2 PLAC Sydney  NSW  Australia
+1 DIV
+2 DATE 2005
+1 DIV
+1 NOTE @NF0008@
+0 @NF0008@ NOTE
+1 CONC Married in the quadrangle at Sydney University
+
+- Gozzies
 0 @F0009@ FAM
 1 HUSB @I00022@
 1 WIFE @I00004@
@@ -253,6 +364,7 @@
 0 @NF0009@ NOTE
 1 CONC Married in The Garrison Anglican Church
 
+- Sean and Lisa
 0 @F0010@ FAM
 1 HUSB @I00006@
 1 WIFE @I00025@
@@ -265,3 +377,21 @@
 1 NOTE @NF0010@
 0 @NF0010@ NOTE
 1 CONC Married in the Anglican Church
+
+- Euan and Dani
+0 @F2027@ FAM
+1 HUSB @I00005@
+1 WIFE @I06092@
+1 MARR
+2 DATE 25 FEB 2000
+2 PLAC Sydney  NSW  Australia
+1 _FA1
+2 PLAC Pavilion-On-The-Park at the Domain
+
+- Al's family
+0 @F3437@ FAM
+1 HUSB @I00024@
+1 WIFE @I10262@
+1 CHIL @I10454@
+
+

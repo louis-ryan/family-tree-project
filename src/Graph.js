@@ -5,7 +5,13 @@ import * as THREE from 'three';
 import SpriteText from 'three-spritetext';
 import { forceCollide } from 'd3-force-3d';
 
-const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode }) => {
+import louAlEu1 from './img/lou_al_eu/lou-al-eu-trip.png';
+import louAlEu2 from './img/lou_al_eu/IMG_0249.png';
+import louAlEu3 from './img/lou_al_eu/IMG_0306.png';
+import louAlEu4 from './img/lou_al_eu/IMG_0308 2.png';
+
+const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode, view }) => {
+
 
   const [highlights, setHighlights] = useState({
     node: null,
@@ -13,18 +19,31 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     links: []
   });
 
+
+
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
 
   const fgRef = useRef();
 
+  useEffect(() => {
+
+    setHighlights({
+      node: null,
+      family: [],
+      links: []
+    })
+
+  }, [view])
+
   // Manage force
   useEffect(() => {
-    fgRef.current.d3Force('collide', forceCollide(100));
+    const force = view === 'GENE' ? 100 : 80
+    fgRef.current.d3Force('collide', forceCollide(force));
   });
 
   // Resize window
-  window.onresize = function(event) {
+  window.onresize = function (event) {
     setWidth(window.innerWidth);
     setHeight(window.innerHeight);
   };
@@ -33,7 +52,7 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
   const positionCamera = useCallback(node => {
     // Aim at node from outside it
     const distance = 350;
-    const distRatio = 2 + distance/Math.hypot(node.x, node.y, node.z);
+    const distRatio = 2 + distance / Math.hypot(node.x, node.y, node.z);
     fgRef.current.cameraPosition(
       { x: node.x * distRatio, y: node.y, z: node.z * distRatio }, // new position
       node, // lookAt ({ x, y, z })
@@ -72,6 +91,12 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     let sprite = new SpriteText(name);
 
     // Sprite defaults
+    const locationSprite = () => {
+      sprite.color = 'white';
+      sprite.backgroundColor = 'none';
+      sprite.borderColor = 'none';
+    }
+
     const coloredSprite = () => {
       sprite.color = node.color;
       sprite.backgroundColor = '#000c';
@@ -84,21 +109,34 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
       sprite.borderColor = '#3333';
     }
 
+
     // NODE.COLOR
     // No highlighted node
     if (highlights.node === null) {
       if (highlightedFamily) {
         if (highlightedFamily === node.surname) {
-          coloredSprite();
+          if (node.surname === "AUS" || node.surname === "EU") {
+            locationSprite();
+          } else {
+            coloredSprite();
+          }
         } else {
           greyedSprite();
         }
       } else {
-        coloredSprite();
+        if (node.surname === "AUS" || node.surname === "EU") {
+          locationSprite();
+        } else {
+          coloredSprite();
+        }
       }
     } else {
       if (highlights.family.indexOf(node.id) !== -1) {
-        coloredSprite();
+        if (node.surname === "AUS" || node.surname === "EU") {
+          locationSprite();
+        } else {
+          coloredSprite();
+        }
       } else {
         greyedSprite();
       }
@@ -123,7 +161,10 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     // Gender
     const labelGender = (node.gender === 'M') ? `♂` : `♀`;
 
-    label += `<p><b>${node.yob} - ${node.yod} ${labelGender}</b></p>`;
+    label += `
+    <p><b>${node.yob} - ${node.yod} ${labelGender}</b></p>
+    <div class="node-picture-space"> <h4>${"picture here?"}</h4> </div>
+    `;
 
     return label += '</div>';
   }
@@ -145,7 +186,7 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
         updatedHighlightFamily.push(links.target.id, links.source.id);
         updatedHighlightLinks.push(links.index);
 
-        setHighlights({node: node, family: updatedHighlightFamily, links: updatedHighlightLinks})
+        setHighlights({ node: node, family: updatedHighlightFamily, links: updatedHighlightLinks })
       }
     }
 
@@ -153,14 +194,14 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     if (highlights.node === null) {
       d3Data.links.filter(links => findFamilies(links, node, highlights));
 
-    // Different node highlighted
+      // Different node highlighted
     } else if (highlights.node !== node) {
-      let tempHighlights = {node: null, family: [], links: []}
+      let tempHighlights = { node: null, family: [], links: [] }
       d3Data.links.filter(links => findFamilies(links, node, tempHighlights));
 
-    // Reset current node
+      // Reset current node
     } else {
-      setHighlights({node: null, family: [], links: []})
+      setHighlights({ node: null, family: [], links: [] })
     }
 
     setNodeInfo(node);
@@ -175,13 +216,39 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
 
   // Link label
   const setLinkLabel = link => {
+
+
+    var sourceStoryEastEurope
+    var targetStoryEastEurope
+
+    link.source.tree.forEach((item, idx) => {
+      if (item.data === "@STORY-east-europe@") { sourceStoryEastEurope = true }
+    })
+
+    link.target.tree.forEach((item, idx) => {
+      if (item.data === "@STORY-east-europe@") { targetStoryEastEurope = true }
+    })
+
     // No state change
-    switch(link.type) {
+    switch (link.type) {
       case 'DIV':
+        return '<div class="link-label"><p>Divorced</p></div>'
         return '<div class="link-label"><p>Divorced</p></div>';
         break;
       case 'MARR':
-        return '<div class="link-label"><p>Married</p></div>';
+        if (sourceStoryEastEurope && targetStoryEastEurope) {
+          return `
+          <div class="link-label">
+          <p>Travelled around Eastern Europe in 2013 together</p>
+          <img width=80px src=${louAlEu1} />
+          <img width=80px src=${louAlEu2} />
+          <img width=80px src=${louAlEu3} />
+          <img width=80px src=${louAlEu4} />
+          </div>
+          `;
+        } else {
+          return '<div class="link-label"><p>Married</p></div>';
+        }
         break;
       case 'birth':
         return '<div class="link-label"><p>Birth</p></div>';
@@ -205,21 +272,30 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
       highlightedFamily ?
         'rgba(255, 153, 153, 0.2)' : // Highlighed family exists, mute all links
         (link.sourceType != 'CHIL' && link.targetType != 'CHIL') ?
-          'rgba(255, 215, 0, 0.6)' : // Romantic link
+          'rgba(255, 215, 0, 0.4)' : // Romantic link
           'rgba(255, 153, 153, 0.2)' : // Normal link
       highlights.links.indexOf(link.index) !== -1 ?
-      (link.sourceType != 'CHIL' && link.targetType != 'CHIL') ?
-        'rgba(255, 215, 0, 0.6)' : // Romantic link
-        'rgba(255, 153, 153, 0.2)' : // Normal link
-      'rgba(255, 153, 153, 0.02)'; // Normal link
+        (link.sourceType != 'CHIL' && link.targetType != 'CHIL') ?
+          'rgba(255, 215, 0, 0.4)' : // Romantic link
+          'rgba(255, 153, 153, 0.2)' : // Normal link
+        'rgba(255, 153, 153, 0.02)'; // Normal link
   }
 
   // Link width
   const setLinkWidth = link => {
-    if (highlights.links.indexOf(link.index) !== -1) {
-      return 1.7;
+
+    if (view === 'LOCA') {
+      if (highlights.links.indexOf(link.index) !== -1) {
+        return 4;
+      } else {
+        return 4;
+      }
     } else {
-      return 1;
+      if (highlights.links.indexOf(link.index) !== -1) {
+        return 4;
+      } else {
+        return 4;
+      }
     }
   }
 
@@ -234,14 +310,14 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
 
   // Remove highlights
   const clearHighlights = () => {
-    setHighlights({node: null, family: [], links: []});
+    setHighlights({ node: null, family: [], links: [] });
     setHighlightedFamily();
     setNodeInfo();
   }
 
   // Add fog
   useEffect(() => {
-    // console.log(d3Data.nodes.length);
+
     let fogNear = 1000;
     let fogFar = 8000;
     if (d3Data.nodes.length < 120) {
@@ -272,21 +348,33 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     const lowestY = Math.min.apply(Math, yRange);
 
     //create a blue LineBasicMaterial
-    var material = new THREE.LineBasicMaterial( {
+    var material = new THREE.LineBasicMaterial({
       color: 0x333333,
       linewidth: 2
-    } );
+    });
 
     var points = [];
-    points.push( new THREE.Vector3( 0, lowestY, 0 ) );
-    points.push( new THREE.Vector3( 0, highestY, 0 ) );
+    points.push(new THREE.Vector3(0, lowestY, 0));
+    points.push(new THREE.Vector3(0, highestY, 0));
 
-    var geometry = new THREE.BufferGeometry().setFromPoints( points );
+    var geometry = new THREE.BufferGeometry().setFromPoints(points);
 
-    var line = new THREE.Line( geometry, material );
+    var line = new THREE.Line(geometry, material);
+
+    if (view === 'LOCA') return
 
     fgRef.current.scene().add(line);
-  }, []);
+
+    return () => {
+      // Remove the sprites when the component unmounts or when view is set to 'LOCA'
+      if (view === 'GENE') {
+        console.log("view: ", view)
+
+        fgRef.current.scene().remove(line);
+
+      }
+    }
+  });
 
   // Add timeline YEAR
   useEffect(() => {
@@ -306,16 +394,16 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     // TIMELINE
     const highestY = Math.max.apply(Math, yRange);
     const lowestY = Math.min.apply(Math, yRange);
-    const halfY = (highestY + lowestY)/2;
-    const quarterY = (halfY + lowestY)/2;
-    const threeQuarterY = (halfY + highestY)/2;
+    const halfY = (highestY + lowestY) / 2;
+    const quarterY = (halfY + lowestY) / 2;
+    const threeQuarterY = (halfY + highestY) / 2;
 
 
     const earliestYOB = Math.min.apply(Math, years);
     const latestYOB = Math.max.apply(Math, years);
-    const halfYOB = parseInt((earliestYOB + latestYOB)/2);
-    const quarterYOB = parseInt((latestYOB + halfYOB)/2);
-    const threeQuarterYOB = parseInt((earliestYOB + halfYOB)/2);
+    const halfYOB = parseInt((earliestYOB + latestYOB) / 2);
+    const quarterYOB = parseInt((latestYOB + halfYOB) / 2);
+    const threeQuarterYOB = parseInt((earliestYOB + halfYOB) / 2);
 
     // EARLIEST
     let earliest = new THREE.Mesh(
@@ -392,12 +480,34 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     threeQuarterTimeLabel.textHeight = 15;
     threeQuarter.add(threeQuarterTimeLabel);
 
+
+
+    if (view === 'LOCA') return
+
     fgRef.current.scene().add(earliest);
     fgRef.current.scene().add(latest);
-    highestY-lowestY > 300 && fgRef.current.scene().add(half);
-    highestY-lowestY > 450 && fgRef.current.scene().add(quarter);
-    highestY-lowestY > 450 && fgRef.current.scene().add(threeQuarter);
-  }, []);
+
+ 
+
+ 
+    // highestY - lowestY > 300 && fgRef.current.scene().add(half);
+    // highestY - lowestY > 450 && fgRef.current.scene().add(quarter);
+    // highestY - lowestY > 450 && fgRef.current.scene().add(threeQuarter);
+
+    return () => {
+      // Remove the sprites when the component unmounts or when view is set to 'LOCA'
+      // if (!fgRef.current) return; // Check if fgRef is available
+      if (view === 'GENE') {
+        // fgRef.current.scene().add(earliest);
+        // fgRef.current.scene().add(latest);
+        fgRef.current.scene().remove(earliest);
+        fgRef.current.scene().remove(latest);
+        // fgRef.current.scene().remove(half);
+        // fgRef.current.scene().remove(quarter);
+        // fgRef.current.scene().remove(threeQuarter);
+      }
+    }
+  });
 
   useEffect(() => {
     fgRef.current.controls().enableDamping = true;
