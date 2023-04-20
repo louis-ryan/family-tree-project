@@ -145,7 +145,7 @@ const Controls = ({ d3Data, setTimelineShowing, highlightedFamily, setHighlighte
             </div>
           </>
         }
-        <p id="surnames-button" className={showingsurnames && 'active'} onClick={toggleSurnames}>{view === "GENE" ? 'names' : 'places of birth'}</p>
+        <p id="surnames-button" className={showingsurnames ? 'active' : ''} onClick={toggleSurnames}>{view === "GENE" ? 'names' : 'places of birth'}</p>
       </div>
     </div >
   )
