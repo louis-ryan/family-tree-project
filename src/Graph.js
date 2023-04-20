@@ -71,47 +71,73 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
   //   }
   // }
 
-  // Node design
   const setNodeThreeObject = node => {
+
+    const setCorrectImg = () => {
+      const name = node.name
+      switch (name) {
+        case "Alexander Graham Harrison Gosewinckel": return 'https://images.squarespace-cdn.com/content/v1/56dce00a45bf214a0b3fadf3/2c341f78-2161-4713-ae7e-09b5d78072c6/alex_gos.png?format=500w'
+        case "Louis Simon Ryan Wilcox": return 'https://images.squarespace-cdn.com/content/v1/56dce00a45bf214a0b3fadf3/1b99c36f-40a6-4244-801a-a675bb4ba19f/louis_ryan.png?format=500w'
+        case "Alessia Magni": return 'https://images.squarespace-cdn.com/content/v1/56dce00a45bf214a0b3fadf3/5951e360-ebeb-4344-9c9d-8ac43d87c807/alessia_magni.png?format=500w'
+        default: ''
+      }
+    }
+
+    console.log("correct img: ", node.name, setCorrectImg())
+
     // Use a sphere as a drag handle
     const obj = new THREE.Mesh(
       new THREE.SphereGeometry(10),
       new THREE.MeshBasicMaterial({ depthWrite: false, transparent: true, opacity: 0 })
     );
 
-    let partOfFamily = highlightedFamily === node.surname;
+    // Create image sprite
+    const imageTexture = new THREE.TextureLoader().load(setCorrectImg(),
+      function (texture) {
+        // console.log('Texture loaded:', texture);
+        const geometry = new THREE.PlaneGeometry(0, 0);
+        const material = new THREE.MeshBasicMaterial({ map: texture, transparent: true, opacity: 0.5 });
+        const mesh = new THREE.Mesh(geometry, material);
+        imageContainer.add(mesh);
+      },
+      function (xhr) {
+        console.error('Error loading texture:', xhr);
+      }
+    );
 
-    // Add text sprite as child
+    const imageMaterial = new THREE.SpriteMaterial({ map: imageTexture });
+    const imageSprite = new THREE.Sprite(imageMaterial);
+    imageSprite.scale.set(100, 100, 1); // Set size of image sprite
+
+    // Create text sprite
     let name;
     if (node.firstName == '?') {
       name = node.name;
     } else {
       name = `${node.firstName} ${node.surname}`;
     }
-    let sprite = new SpriteText(name);
+    const textSprite = new SpriteText(name);
 
-    // Sprite defaults
+    // Set text sprite defaults
     const locationSprite = () => {
-      sprite.color = 'white';
-      sprite.backgroundColor = 'none';
-      sprite.borderColor = 'none';
+      textSprite.color = 'white';
+      textSprite.backgroundColor = 'none';
+      textSprite.borderColor = 'none';
     }
 
     const coloredSprite = () => {
-      sprite.color = node.color;
-      sprite.backgroundColor = '#000c';
-      sprite.borderColor = '#555';
+      textSprite.color = node.color;
+      textSprite.backgroundColor = '#000c';
+      textSprite.borderColor = '#555';
     }
 
     const greyedSprite = () => {
-      sprite.color = '#3335';
-      sprite.backgroundColor = '#0002';
-      sprite.borderColor = '#3333';
+      textSprite.color = '#3335';
+      textSprite.backgroundColor = '#0002';
+      textSprite.borderColor = '#3333';
     }
 
-
-    // NODE.COLOR
-    // No highlighted node
+    // Set text sprite style based on node and highlight state
     if (highlights.node === null) {
       if (highlightedFamily) {
         if (highlightedFamily === node.surname) {
@@ -142,15 +168,44 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
       }
     }
 
-    sprite.fontFace = "Helvetica";
-    sprite.fontWeight = 600;
-    sprite.textHeight = 10;
-    sprite.borderWidth = 1;
-    sprite.borderRadius = 8;
-    sprite.padding = 4;
-    obj.add(sprite);
+    textSprite.fontFace = "Helvetica";
+    textSprite.fontWeight = 600;
+    textSprite.textHeight = 10;
+    textSprite.borderWidth = 0;
+    textSprite.borderRadius = 8;
+    textSprite.padding = 4;
+
+
+    // Create container for image and text sprites
+    const container = new THREE.Object3D();
+    container.add(imageSprite);
+    container.add(textSprite);
+
+    // Position image and text sprites in container
+    const imageContainer = new THREE.Object3D();
+    imageContainer.position.set(0, 80, 0);
+    container.add(imageContainer);
+    textSprite.position.set(0, 0, 0);
+
+    // Add container as child of drag handle
+    obj.add(container);
+
     return obj;
   }
+
+
+
+  // Light Source
+  useEffect(() => {
+
+    // create a point light
+    const pointLight = new THREE.PointLight(0xffffff, 1, 100);
+    pointLight.position.set(0, 0, 10);
+
+    // add the light to the scene
+    fgRef.current.scene().add(pointLight);
+  })
+
 
   // Node label
   const setNodeLabel = node => {
@@ -161,10 +216,7 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     // Gender
     const labelGender = (node.gender === 'M') ? `♂` : `♀`;
 
-    label += `
-    <p><b>${node.yob} - ${node.yod} ${labelGender}</b></p>
-    <div class="node-picture-space"> <h4>${"picture here?"}</h4> </div>
-    `;
+    label += `<p><b>${node.yob} - ${node.yod} ${labelGender}</b></p>`;
 
     return label += '</div>';
   }
@@ -221,11 +273,11 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     var sourceStoryEastEurope
     var targetStoryEastEurope
 
-    link.source.tree.forEach((item, idx) => {
+    link.source.tree.forEach((item) => {
       if (item.data === "@STORY-east-europe@") { sourceStoryEastEurope = true }
     })
 
-    link.target.tree.forEach((item, idx) => {
+    link.target.tree.forEach((item) => {
       if (item.data === "@STORY-east-europe@") { targetStoryEastEurope = true }
     })
 
@@ -233,7 +285,6 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     switch (link.type) {
       case 'DIV':
         return '<div class="link-label"><p>Divorced</p></div>'
-        return '<div class="link-label"><p>Divorced</p></div>';
         break;
       case 'MARR':
         if (sourceStoryEastEurope && targetStoryEastEurope) {
@@ -281,24 +332,6 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
         'rgba(255, 153, 153, 0.02)'; // Normal link
   }
 
-  // Link width
-  const setLinkWidth = link => {
-
-    if (view === 'LOCA') {
-      if (highlights.links.indexOf(link.index) !== -1) {
-        return 4;
-      } else {
-        return 4;
-      }
-    } else {
-      if (highlights.links.indexOf(link.index) !== -1) {
-        return 4;
-      } else {
-        return 4;
-      }
-    }
-  }
-
   // Link particles
   const setLinkParticleWidth = link => {
     if (highlights.links.indexOf(link.index) !== -1) {
@@ -328,7 +361,7 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     const fogColor = new THREE.Color(0x111111);
 
     var myFog = new THREE.Fog(fogColor, fogNear, fogFar);
-    var myFogg = new THREE.FogExp2(fogColor, 0.0025);
+    // var myFogg = new THREE.FogExp2(fogColor, 0.0025);
 
     fgRef.current.scene().fog = myFog;
   }, []);
@@ -368,10 +401,7 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     return () => {
       // Remove the sprites when the component unmounts or when view is set to 'LOCA'
       if (view === 'GENE') {
-        console.log("view: ", view)
-
         fgRef.current.scene().remove(line);
-
       }
     }
   });
@@ -487,9 +517,9 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     fgRef.current.scene().add(earliest);
     fgRef.current.scene().add(latest);
 
- 
 
- 
+
+
     // highestY - lowestY > 300 && fgRef.current.scene().add(half);
     // highestY - lowestY > 450 && fgRef.current.scene().add(quarter);
     // highestY - lowestY > 450 && fgRef.current.scene().add(threeQuarter);
@@ -545,7 +575,7 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     linkLabel={setLinkLabel}
     linkColor={setLinkColor}
     linkOpacity={1}
-    linkWidth={setLinkWidth}
+    linkWidth={4}
     linkDirectionalParticles={link => (link.sourceType != 'CHIL' && link.targetType == 'CHIL' && d3Data.nodes.length < 300) ? 8 : 0}
     linkDirectionalParticleWidth={setLinkParticleWidth}
     linkDirectionalParticleSpeed={.001}
