@@ -5,22 +5,22 @@ import locaIcon from './img/LOCA_view.svg';
 
 const Controls = ({ d3Data, setTimelineShowing, highlightedFamily, setHighlightedFamily, hoveredNode, view, setView }) => {
 
-  const [showingLegend, setShowingLegend] = useState(false);
+  // const [showingLegend, setShowingLegend] = useState(false);
   const [showingsurnames, setShowingsurnames] = useState(false);
 
-  const toggleLegend = () => {
-    setShowingLegend(prevState => !prevState);
-    setShowingsurnames(false);
-  }
+  // const toggleLegend = () => {
+  //   setShowingLegend(prevState => !prevState);
+  //   setShowingsurnames(false);
+  // }
 
   const toggleSurnames = () => {
     setShowingsurnames(prevState => !prevState);
-    setShowingLegend(false);
+    // setShowingLegend(false);
   }
 
-  const handleClick = () => {
-    setTimelineShowing(prevState => !prevState)
-  }
+  // const handleClick = () => {
+  //   setTimelineShowing(prevState => !prevState)
+  // }
 
   function compareSurname(a, b) {
     if (a.surname < b.surname) {
@@ -57,7 +57,7 @@ const Controls = ({ d3Data, setTimelineShowing, highlightedFamily, setHighlighte
     return (
       <div
         id="node-info--content"
-        style={{overflow: "hidden"}}
+        style={{ overflow: "hidden" }}
       >
         {/* {node.title ? <h4 class="node-title"><span style={{ color: node.color }}>{node.name} ({node.title})</span> {labelGender}</h4> :
           <h4><span style={{ color: node.color }}>{node.name}</span> {labelGender}</h4>} */}
@@ -81,7 +81,7 @@ const Controls = ({ d3Data, setTimelineShowing, highlightedFamily, setHighlighte
 
       <div style={{ position: "fixed", zIndex: "5" }}>
         <div
-          style={{ width: "48px", height: "48px", backgroundColor: "white", margin: "40px 24px 8px 24px", borderRadius: "50%", cursor: "pointer", opacity: view === "LOCA" ? "0.5" : "1" }}
+          style={{ width: "48px", height: "48px", margin: "40px 24px 8px 24px", borderRadius: "50%", cursor: "pointer", opacity: view === "LOCA" ? "0.5" : "1" }}
           onClick={() => { setView('GENE') }}
         >
           <img src={geneIcon} style={{ width: "100%" }} />
@@ -89,7 +89,7 @@ const Controls = ({ d3Data, setTimelineShowing, highlightedFamily, setHighlighte
 
 
         <div
-          style={{ width: "48px", height: "48px", backgroundColor: "white", margin: "24px 24px 8px 24px", borderRadius: "50%", cursor: "pointer", opacity: view === "GENE" ? "0.5" : "1" }}
+          style={{ width: "48px", height: "48px", margin: "24px 24px 8px 24px", borderRadius: "50%", cursor: "pointer", opacity: view === "GENE" ? "0.5" : "1" }}
           onClick={() => { setView('LOCA') }}
         >
           <img src={locaIcon} style={{ width: "100%" }} />
@@ -135,17 +135,22 @@ const Controls = ({ d3Data, setTimelineShowing, highlightedFamily, setHighlighte
 
       <div id="surnames">
         {showingsurnames &&
-          <>
-            <div className="surnames-heading">
-              <h2>names</h2>
-              <p>click name to toggle highlight</p>
-            </div>
-            <div className="surnames-content">
-              {surnameList}
-            </div>
-          </>
+          <div 
+          className="surnames-content"
+          style={{width: "240px"}}
+          >
+            <h2>{view === "GENE" ? 'names' : 'birthplaces'}</h2>
+            {surnameList}
+          </div>
         }
-        <p id="surnames-button" className={showingsurnames ? 'active' : ''} onClick={toggleSurnames}>{view === "GENE" ? 'names' : 'places of birth'}</p>
+        <p
+          id="surnames-button"
+          className={showingsurnames ? 'active' : ''}
+          onClick={toggleSurnames}
+          style={{ width: showingsurnames ? "72px" : "240px" }}
+        >
+          {showingsurnames ? "close" : view === "GENE" ? 'names' : 'birthplaces'}
+        </p>
       </div>
     </div >
   )

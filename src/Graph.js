@@ -38,7 +38,7 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
 
   // Manage force
   useEffect(() => {
-    const force = view === 'GENE' ? 100 : 80
+    const force = view === 'GENE' ? 100 : 100
     fgRef.current.d3Force('collide', forceCollide(force));
   });
 
@@ -75,15 +75,14 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
 
     const setCorrectImg = () => {
       const name = node.name
-      switch (name) {
-        case "Alexander Graham Harrison Gosewinckel": return 'https://images.squarespace-cdn.com/content/v1/56dce00a45bf214a0b3fadf3/2c341f78-2161-4713-ae7e-09b5d78072c6/alex_gos.png?format=500w'
-        case "Louis Simon Ryan Wilcox": return 'https://images.squarespace-cdn.com/content/v1/56dce00a45bf214a0b3fadf3/1b99c36f-40a6-4244-801a-a675bb4ba19f/louis_ryan.png?format=500w'
-        case "Alessia Magni": return 'https://images.squarespace-cdn.com/content/v1/56dce00a45bf214a0b3fadf3/5951e360-ebeb-4344-9c9d-8ac43d87c807/alessia_magni.png?format=500w'
-        default: ''
-      }
-    }
+      
+        if (name.includes("Alexander Graham Harrison Gosewinckel")) return 'https://images.squarespace-cdn.com/content/v1/56dce00a45bf214a0b3fadf3/73c3466e-76d1-488e-b5ff-c1afd87c421a/alex_gos.png?format=500w'
+        if (name.includes("Louis Simon Ryan Wilcox")) return 'https://images.squarespace-cdn.com/content/v1/56dce00a45bf214a0b3fadf3/a1875689-1188-454c-8366-74d59e9d26ce/louis_ryan.png?format=500w'
+        if (name.includes("Alessia Magni")) return 'https://images.squarespace-cdn.com/content/v1/56dce00a45bf214a0b3fadf3/f1ca9079-3c1f-493a-b33f-19d8962efed9/alessia_magni.png?format=500w'
 
-    console.log("correct img: ", node.name, setCorrectImg())
+        if (name.includes("EUROPE")) return 'https://images.squarespace-cdn.com/content/v1/56dce00a45bf214a0b3fadf3/8ae5d344-ff6b-447c-bbca-05f99a4ab73a/europe.png?format=500w'
+      
+    }
 
     // Use a sphere as a drag handle
     const obj = new THREE.Mesh(
@@ -118,6 +117,9 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     }
     const textSprite = new SpriteText(name);
 
+    console.log("image: ", imageSprite)
+    console.log("text: ", textSprite)
+
     // Set text sprite defaults
     const locationSprite = () => {
       textSprite.color = 'white';
@@ -127,14 +129,15 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
 
     const coloredSprite = () => {
       textSprite.color = node.color;
-      textSprite.backgroundColor = '#000c';
+      textSprite.backgroundColor = 'none';
       textSprite.borderColor = '#555';
     }
 
     const greyedSprite = () => {
       textSprite.color = '#3335';
-      textSprite.backgroundColor = '#0002';
-      textSprite.borderColor = '#3333';
+      textSprite.background = 'unset';
+      textSprite.borderColor = 'unset';
+      imageSprite.visible = false
     }
 
     // Set text sprite style based on node and highlight state
@@ -555,7 +558,7 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     // Display
     width={width}
     height={height}
-    backgroundColor={'#010000'}
+    backgroundColor={'#467EA8'}
     showNavInfo={false}
 
     // Controls

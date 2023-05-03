@@ -1,18 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="700px" height="700px" viewBox="0 0 700 700" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
     <title>GENE_view</title>
     <desc>Created with Sketch.</desc>
     <g id="GENE_view" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <circle id="Oval" stroke="#979797" cx="28.5" cy="28.5" r="28"></circle>
-        <g id="Group" transform="translate(5.000000, 5.000000)" stroke="#979797">
-            <rect id="Rectangle" x="0.5" y="25.5" width="19" height="12"></rect>
-            <rect id="Rectangle-Copy-2" x="14.5" y="0.5" width="19" height="12"></rect>
-            <rect id="Rectangle-Copy" x="27.5" y="25.5" width="19" height="12"></rect>
-            <line x1="37" y1="24.75" x2="37" y2="17.25" id="Line-Copy" stroke-linecap="square"></line>
-            <line x1="10" y1="17" x2="37" y2="17" id="Line-2" stroke-linecap="square"></line>
-            <line x1="10" y1="24.75" x2="10" y2="17.25" id="Line" stroke-linecap="square"></line>
-            <line x1="24" y1="13" x2="24" y2="17" id="Line-3" stroke-linecap="square"></line>
+        <g id="Group" transform="translate(39.000000, 60.000000)" stroke="#734266" stroke-width="63">
+            <rect id="Rectangle" x="84.1315789" y="347.289474" width="147.526316" height="73.8421053" rx="36.9210526"></rect>
+            <rect id="Rectangle-Copy-2" x="231.5" y="84.1315789" width="147.526316" height="73.8421053" rx="36.9210526"></rect>
+            <rect id="Rectangle-Copy" x="368.342105" y="347.289474" width="147.526316" height="73.8421053" rx="36.9210526"></rect>
+            <line x1="442.105263" y1="313.157895" x2="442.105263" y2="234.210526" id="Line-Copy" stroke-linecap="square"></line>
+            <line x1="157.894737" y1="231.578947" x2="442.105263" y2="231.578947" id="Line-2" stroke-linecap="square"></line>
+            <line x1="157.894737" y1="313.157895" x2="157.894737" y2="234.210526" id="Line" stroke-linecap="square"></line>
+            <line x1="305.263158" y1="189.473684" x2="305.263158" y2="231.578947" id="Line-3" stroke-linecap="square"></line>
+            <circle id="Oval" cx="300" cy="300" r="268.5"></circle>
+        </g>
+        <g id="Group" transform="translate(61.000000, 40.000000)" stroke="#FFFFFF" stroke-width="28">
+            <rect id="Rectangle" x="66.6315789" y="329.789474" width="182.526316" height="108.842105" rx="49"></rect>
+            <rect id="Rectangle-Copy-2" x="214" y="66.6315789" width="182.526316" height="108.842105" rx="49"></rect>
+            <rect id="Rectangle-Copy" x="350.842105" y="329.789474" width="182.526316" height="108.842105" rx="49"></rect>
+            <line x1="442.105263" y1="313.157895" x2="442.105263" y2="234.210526" id="Line-Copy" stroke-linecap="square"></line>
+            <line x1="157.894737" y1="231.578947" x2="442.105263" y2="231.578947" id="Line-2" stroke-linecap="square"></line>
+            <line x1="157.894737" y1="313.157895" x2="157.894737" y2="234.210526" id="Line" stroke-linecap="square"></line>
+            <line x1="305.263158" y1="189.473684" x2="305.263158" y2="231.578947" id="Line-3" stroke-linecap="square"></line>
+            <circle id="Oval" cx="300" cy="300" r="286"></circle>
+        </g>
+        <g id="Group" transform="translate(54.000000, 53.000000)" stroke-width="26">
+            <rect id="Rectangle" stroke="#F0C998" x="65.6315789" y="328.789474" width="184.526316" height="110.842105" rx="49"></rect>
+            <rect id="Rectangle-Copy-2" stroke="#FFC0BC" x="213" y="65.6315789" width="184.526316" height="110.842105" rx="49"></rect>
+            <rect id="Rectangle-Copy" stroke="#F0C998" x="349.842105" y="328.789474" width="184.526316" height="110.842105" rx="49"></rect>
+            <line x1="442.105263" y1="313.157895" x2="442.105263" y2="234.210526" id="Line-Copy" stroke="#E6D7B5" stroke-linecap="round"></line>
+            <line x1="157.894737" y1="231.578947" x2="442.105263" y2="231.578947" id="Line-2" stroke="#E6D7B5" stroke-linecap="round"></line>
+            <line x1="157.894737" y1="313.157895" x2="157.894737" y2="234.210526" id="Line" stroke="#E6D7B5" stroke-linecap="round"></line>
+            <line x1="305.263158" y1="189.473684" x2="305.263158" y2="231.578947" id="Line-3" stroke="#E6D7B5" stroke-linecap="round"></line>
+            <circle id="Oval" stroke="#FFD9BC" cx="300" cy="300" r="287"></circle>
         </g>
     </g>
 </svg>

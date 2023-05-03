@@ -90,7 +90,6 @@
 #surnames-button,
 .surnames-content,
 .surnames-heading {
-  margin: 0px auto;
   padding: 3px 15px;
 }
 
@@ -111,19 +110,15 @@
   position: fixed;
   margin: 15px;
 
+
   &>p {
     width: 60px;
     margin-right: 0px;
     @include neumorph.neumorph;
-
+    border-radius: 0px;
+    border: none;
     &:hover {
       @include neumorph.neumorph-hover;
-    }
-
-    &:active,
-    &.active {
-      @include neumorph.neumorph-active;
-      border-radius: 0px 0px 15px 15px;
     }
   }
 
@@ -131,13 +126,11 @@
     max-height: 400px;
     overflow-y: auto;
     background-color: white;
-    border-radius: 0px 0px 0px 15px;
   }
 
   .surnames-heading {
     padding-bottom: 0px;
     background-color: white;
-    border-radius: 15px 15px 0px 0px;
 
     h2 {
       margin: 5px auto;
@@ -173,8 +166,8 @@
   }
 
   #node-info--content {
-    width: 300px;
-    max-height: 324px;
+    width: 328px;
+    max-height: 318px;
     background-color: white;
     border-radius: 15px 15px;
     overflow-y: auto;
