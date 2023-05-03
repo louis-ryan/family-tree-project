@@ -158,7 +158,7 @@
 2 DATE 22 NOV 1965
 1 OCCU
 2 PLAC Motor Equipment Service Contractor
-1 FAMS @FROM-sydney@
+1 FAMC @FROM-sydney@
 
 0 @I00023@ INDI
 1 NAME Natasha Marie Gosewinckel /Sydney/
@@ -218,7 +218,7 @@
 1 EVEN
 2 TYPE Degrees/Leters
 2 PLAC RN
-1 FAMS @FROM-sydney@
+1 FAMC @FROM-sydney@
 
 0 @I00026@ INDI
 1 NAME Benjamin John Wilcox /Sydney/
@@ -250,7 +250,6 @@
 1 EVEN
 2 TYPE Degrees/Leters
 2 PLAC B.Prim.Ed
-- 1 FAMS @F3458@
 1 FAMC @FROM-sydney@
 
 0 @I04683@ INDI
@@ -295,6 +294,28 @@
 1 FAMC @FROM-berlin@
 1 FAMS @STORY-east-europe@
 
+0 @alessia magni@ INDI
+1 NAME Alessia Magni /Florence/
+1 SEX F
+1 BIRT
+2 DATE 31 OCT 1988
+2 PLAC Firenze  Tuscano  Italy
+1 EVEN
+2 TYPE Ship Arrival
+2 PLAC Home City: Berlin
+1 EVEN
+2 TYPE Interesting Fact
+2 PLAC On marriage retained her maiden name Magni
+1 EVEN
+2 TYPE Interesting Fact
+2 PLAC Home City: Berlin
+1 EVEN
+2 TYPE Degrees/Leters
+2 PLAC BA (Uni Firenze)
+1 FAMC @FROM-berlin@
+1 FAMC @FROM-florence@
+1 FAMC @FROM-melbourne@
+
 0 @I00020@ INDI
 1 NAME Philippa Ann Ryan /Caracas/
 1 SEX F
@@ -316,7 +337,7 @@
 2 CONT 2021
 2 CONT Australia
 1 PHON (02) 9357 4380   pipryan@@ozemail.com.au
-1 FAMS @FROM-sydney@
+1 FAMC @FROM-sydney@
 
 
 -LOCATIONS
@@ -355,6 +376,12 @@
 1 FAMC @cities-IN-europe@
 1 FAMS @FROM-den-haag@
 
+-Florence
+0 @florence@ INDI
+1 NAME FLORENCE /EU/
+1 FAMC @cities-IN-europe@
+1 FAMS @FROM-florence@
+
 
 
 -CONNECTIONS
@@ -370,6 +397,7 @@
 1 HUSB @europe@
 1 CHIL @berlin@
 1 CHIL @den-haag@
+1 CHIL @florence@
 
 - Sydney ppl
 0 @FROM-sydney@ FAM
@@ -398,17 +426,24 @@
 1 HUSB @melbourne@
 1 CHIL @louis ryan@
 1 CHIL @andrew wilcox@
+1 CHIL @alessia magni@
 
 - Berlin ppl
 0 @FROM-berlin@ FAM
 1 HUSB @berlin@
 1 CHIL @louis ryan@
 1 CHIL @alex gos@
+1 CHIL @alessia magni@
 
 - Den-Haag ppl
 0 @FROM-den-haag@ FAM
 1 HUSB @den-haag@
 1 CHIL @oma@
+
+- Florence ppl
+0 @FROM-florence@ FAM
+1 HUSB @florence@
+1 CHIL @alessia magni@
 
 
 

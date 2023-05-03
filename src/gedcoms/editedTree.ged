@@ -294,6 +294,26 @@
 1 FAMS @F3438@
 1 FAMC @F0008@
 
+0 @I10302@ INDI
+1 NAME Alessia /Magni/
+1 SEX F
+1 BIRT
+2 DATE 31 OCT 1988
+2 PLAC Firenze  Tuscano  Italy
+1 EVEN
+2 TYPE Ship Arrival
+2 PLAC Home City: Berlin
+1 EVEN
+2 TYPE Interesting Fact
+2 PLAC On marriage retained her maiden name Magni
+1 EVEN
+2 TYPE Interesting Fact
+2 PLAC Home City: Berlin
+1 EVEN
+2 TYPE Degrees/Leters
+2 PLAC BA (Uni Firenze)
+1 FAMS @F3438@
+
 0 @I00020@ INDI
 1 NAME Philippa Ann /Ryan/
 1 SEX F
@@ -394,4 +414,13 @@
 1 WIFE @I10262@
 1 CHIL @I10454@
 
-
+- Me & Ale
+0 @F3438@ FAM
+1 HUSB @I00021@
+1 WIFE @I10302@
+1 MARR
+2 DATE 3 JAN 2019
+2 PLAC K�benhavn  Denmark
+1 EVEN
+2 TYPE Marriage location
+2 PLAC K�benhavn R�dhus (City Hall)
