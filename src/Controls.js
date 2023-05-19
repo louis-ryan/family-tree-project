@@ -79,7 +79,7 @@ const Controls = ({ d3Data, setTimelineShowing, highlightedFamily, setHighlighte
   return (
     <div id='controls' style={{ textAlign: "center" }}>
 
-      <div style={{ position: "fixed", zIndex: "5" }}>
+      {/* <div style={{ position: "fixed", zIndex: "5" }}>
         <div
           style={{ width: "48px", height: "48px", margin: "40px 24px 8px 24px", borderRadius: "50%", cursor: "pointer", opacity: view === "LOCA" ? "0.5" : "1" }}
           onClick={() => { setView('GENE') }}
@@ -95,7 +95,7 @@ const Controls = ({ d3Data, setTimelineShowing, highlightedFamily, setHighlighte
           <img src={locaIcon} style={{ width: "100%" }} />
         </div>
 
-      </div>
+      </div> */}
 
 
       {/* <div id="back-button" onClick={closeRoots}>

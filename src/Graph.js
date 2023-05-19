@@ -10,6 +10,8 @@ import louAlEu2 from './img/lou_al_eu/IMG_0249.png';
 import louAlEu3 from './img/lou_al_eu/IMG_0306.png';
 import louAlEu4 from './img/lou_al_eu/IMG_0308 2.png';
 
+import { setCorrectImg } from "./headshots";
+
 const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode, view }) => {
 
 
@@ -73,16 +75,7 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
 
   const setNodeThreeObject = node => {
 
-    const setCorrectImg = () => {
-      const name = node.name
-      
-        if (name.includes("Alexander Graham Harrison Gosewinckel")) return 'https://images.squarespace-cdn.com/content/v1/56dce00a45bf214a0b3fadf3/73c3466e-76d1-488e-b5ff-c1afd87c421a/alex_gos.png?format=500w'
-        if (name.includes("Louis Simon Ryan Wilcox")) return 'https://images.squarespace-cdn.com/content/v1/56dce00a45bf214a0b3fadf3/a1875689-1188-454c-8366-74d59e9d26ce/louis_ryan.png?format=500w'
-        if (name.includes("Alessia Magni")) return 'https://images.squarespace-cdn.com/content/v1/56dce00a45bf214a0b3fadf3/f1ca9079-3c1f-493a-b33f-19d8962efed9/alessia_magni.png?format=500w'
-
-        if (name.includes("EUROPE")) return 'https://images.squarespace-cdn.com/content/v1/56dce00a45bf214a0b3fadf3/8ae5d344-ff6b-447c-bbca-05f99a4ab73a/europe.png?format=500w'
-      
-    }
+    console.log("name: ", node.name)
 
     // Use a sphere as a drag handle
     const obj = new THREE.Mesh(
@@ -91,10 +84,17 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     );
 
     // Create image sprite
-    const imageTexture = new THREE.TextureLoader().load(setCorrectImg(),
+    const imageTexture = new THREE.TextureLoader().load(setCorrectImg(node.name),
       function (texture) {
-        // console.log('Texture loaded:', texture);
-        const geometry = new THREE.PlaneGeometry(0, 0);
+
+        const radius = 50; // Set the radius of the circle
+
+        // Create a circular geometry
+        const geometry = new THREE.CircleGeometry(radius, 32);
+
+        // Set the position of the geometry's vertices
+        geometry.vertices.shift();
+
         const material = new THREE.MeshBasicMaterial({ map: texture, transparent: true, opacity: 0.5 });
         const mesh = new THREE.Mesh(geometry, material);
         imageContainer.add(mesh);
@@ -106,7 +106,8 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
 
     const imageMaterial = new THREE.SpriteMaterial({ map: imageTexture });
     const imageSprite = new THREE.Sprite(imageMaterial);
-    imageSprite.scale.set(100, 100, 1); // Set size of image sprite
+    imageSprite.scale.set(50, 50, 1); // Set size of image sprite
+    imageSprite.position.y = 35;
 
     // Create text sprite
     let name;
@@ -116,9 +117,6 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
       name = `${node.firstName} ${node.surname}`;
     }
     const textSprite = new SpriteText(name);
-
-    console.log("image: ", imageSprite)
-    console.log("text: ", textSprite)
 
     // Set text sprite defaults
     const locationSprite = () => {
@@ -172,10 +170,10 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     }
 
     textSprite.fontFace = "Helvetica";
-    textSprite.fontWeight = 600;
-    textSprite.textHeight = 10;
+    textSprite.fontWeight = 400;
+    textSprite.textHeight = 8;
     textSprite.borderWidth = 0;
-    textSprite.borderRadius = 8;
+    textSprite.borderRadius = 0;
     textSprite.padding = 4;
 
 
@@ -447,10 +445,10 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     earliest.position.y = highestY + 15;
 
     let earliestTimeLabel = earliestYOB ? new SpriteText(earliestYOB) : new SpriteText("Earlier");
-    earliestTimeLabel.color = '#f8f8f8';
+    earliestTimeLabel.color = '#000000';
     earliestTimeLabel.fontFace = "Helvetica";
     earliestTimeLabel.fontWeight = 800;
-    earliestTimeLabel.textHeight = 25;
+    earliestTimeLabel.textHeight = 40;
     earliest.add(earliestTimeLabel);
 
     // LATEST
@@ -462,10 +460,10 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     latest.position.y = lowestY - 15;
 
     let latestTimeLabel = latestYOB ? new SpriteText(latestYOB) : new SpriteText("Later");
-    latestTimeLabel.color = '#f8f8f8';
+    latestTimeLabel.color = '#000000';
     latestTimeLabel.fontFace = "Helvetica";
     latestTimeLabel.fontWeight = 800;
-    latestTimeLabel.textHeight = 25;
+    latestTimeLabel.textHeight = 40;
     latest.add(latestTimeLabel);
 
     // HALF
@@ -477,7 +475,7 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     half.position.y = halfY;
 
     let halfTimeLabel = new SpriteText(halfYOB);
-    halfTimeLabel.color = '#ccc';
+    halfTimeLabel.color = '#000000';
     halfTimeLabel.fontFace = "Helvetica";
     halfTimeLabel.fontWeight = 800;
     halfTimeLabel.textHeight = 15;
@@ -492,7 +490,7 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     quarter.position.y = quarterY;
 
     let quarterTimeLabel = new SpriteText(quarterYOB);
-    quarterTimeLabel.color = '#ccc';
+    quarterTimeLabel.color = '#000000';
     quarterTimeLabel.fontFace = "Helvetica";
     quarterTimeLabel.fontWeight = 800;
     quarterTimeLabel.textHeight = 15;
@@ -507,7 +505,7 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     threeQuarter.position.y = threeQuarterY;
 
     let threeQuarterTimeLabel = new SpriteText(threeQuarterYOB);
-    threeQuarterTimeLabel.color = '#ccc';
+    threeQuarterTimeLabel.color = '#000000';
     threeQuarterTimeLabel.fontFace = "Helvetica";
     threeQuarterTimeLabel.fontWeight = 800;
     threeQuarterTimeLabel.textHeight = 15;
@@ -558,7 +556,7 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
     // Display
     width={width}
     height={height}
-    backgroundColor={'#467EA8'}
+    backgroundColor={'#1C242A'}
     showNavInfo={false}
 
     // Controls
