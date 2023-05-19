@@ -6,6 +6,13 @@
 2 FORM LINEAGE-LINKED
 1 CHAR UTF-8
 
+
+
+
+
+
+
+
 0 @I00001@ INDI
 1 NAME Graham John Rutledge /Wilcox/
 1 SEX M
@@ -26,6 +33,7 @@
 2 CONT Australia
 1 PHON (02) 8765 1112  wilcox@@bigpond.net.au
 1 FAMS @F0001@
+1 FAMC @F0003@
 
 0 @I00002@ INDI
 1 NAME Johanna Cornelia /Kleingeld/
@@ -44,6 +52,7 @@
 1 OCCU
 2 PLAC Social Services
 1 FAMS @F0001@
+1 FAMC @F0011@
 1 NOTE @NI00002@
 0 @NI00002@ NOTE
 1 CONC Johanna was born while the family lived at Altingstraat 14, s'Gravenhage 
@@ -251,7 +260,7 @@
 1 EVEN
 2 TYPE Degrees/Leters
 2 PLAC B.Prim.Ed
-- 1 FAMS @F3458@
+1 FAMS @F3458@
 1 FAMC @F0010@
 
 0 @I04683@ INDI
@@ -339,6 +348,377 @@
 - 1 FAMS @F2751@
 - 1 FAMC @F0018@
 
+0 @I09425@ INDI
+1 NAME Nathan Daniel /Kensell-Daly/
+1 SEX M
+1 BIRT
+2 DATE 7 MAY 1988
+2 PLAC Wahroonga  NSW  Australia
+1 OCCU
+2 PLAC Motor Vehicle Dealer CEO
+1 FAMS @F3369@
+
+0 @I00027@ INDI
+1 NAME (John) Jan Willem IJsbrand /Kleingeld/
+1 SEX M
+1 BIRT
+2 DATE 14 NOV 1906
+2 PLAC Stompwijk  Holland
+1 DEAT
+2 DATE 9 JUN 1972
+2 PLAC West Wyalong  NSW  Australia
+2 SOUR Death Certificate on file
+2 CAUS Cancer
+1 EVEN
+2 TYPE Ship Arrival
+2 PLAC Arr Sydney on "Johan van Oldenbarnevelt"  21 Jan 1951
+1 EVEN
+2 TYPE Citizenship Note
+2 PLAC Naturalised 3 Oct 1957
+2 SOUR Naturalization Certificate on file
+1 OCCU
+2 PLAC Builder
+1 FAMS @F0011@
+1 FAMC @F0406@
+1 NOTE @NI00027@
+0 @NI00027@ NOTE
+1 CONC Jan wanted the family to migrate to Australia but their were many 
+1 CONC difficulties. One of these was the need to have permission to assign the 
+1 CONC lease for the home, for which they would receive a premium and thus pay 
+1 CONC their way.  The assignees were Indonesian and permission was denied.  
+1 CONC They successfully appealed direct to the Queen's husband, Prince Bernhard.
+1 CONT
+1 CONT On 15 December 1950, the Kleingeld family sailed to Sydney by way of the 
+1 CONC Suez Canal aboard the "Johan van Oldenbarneveldt" and arrived Sydney on 
+1 CONC 23 January 1951. 
+
+0 @I00028@ INDI
+1 NAME (Helen) Wilhelmina Helena /Dullaart/
+1 SEX F
+1 BIRT
+2 DATE 28 NOV 1913
+2 PLAC Delft  Holland
+1 DEAT
+2 DATE 15 JUL 1994
+2 PLAC Gosford  NSW  Australia
+2 SOUR Death Certificate on file
+1 EVEN
+2 TYPE Ship Arrival
+2 PLAC Arr Sydney on "Johan van Oldenbarnevelt"  21 Jan 1951
+1 EVEN
+2 TYPE Citizenship Note
+2 PLAC Naturalised 3 Oct 1957
+2 SOUR Naturalization Certificate on file
+1 FAMS @F0011@
+111 FAMS @F0397@
+1 FAMC @F0398@
+
+0 @I10398@ INDI
+1 NAME Angus Blair /Roberts/
+1 SEX M
+1 BIRT
+2 DATE 9 JAN 1988
+2 PLAC Blacktown  NSW  Australia
+1 OCCU
+2 PLAC Landscape Sales Assistant Manager
+1 FAMS @F3458@
+
+0 @I00007@ INDI
+1 NAME Donald Rutledge /Wilcox/
+1 SEX M
+1 TITL Reverend
+1 BIRT
+2 DATE 14 NOV 1907
+2 PLAC Stanmore  NSW  Australia
+2 SOUR @S20746@
+3 NOTE Stanmore is the place of birth.for father's birthplace on David's birth certificate. I previously had Annandale but I don't know why.
+1 DEAT
+2 DATE 24 MAY 1974
+2 PLAC Chatswood  NSW  Australia
+2 CAUS Heart Failure
+1 EVEN
+2 TYPE Birth Detail
+2 PLAC Born at "Wentworth" Clarendon Road, Stanmore
+1 OCCU
+2 PLAC Presbyterian Minister
+1 EVEN
+2 TYPE Interesting Fact
+2 PLAC Don and Val were second cousins
+1 TITL
+2 PLAC Rev
+1 FAMS @F0003@
+1 FAMC @F0004@
+1 NOTE @NI00007@
+0 @NI00007@ NOTE
+1 CONC Rev Donald Rutledge Wilcox was a minister in the Presbyterian Church of 
+1 CONC Australia
+
+0 @I00008@ INDI
+1 NAME Valerie Ashton /Louat/
+1 SEX F
+1 BIRT
+2 DATE 23 DEC 1909
+2 PLAC Homebush  NSW  Australia
+1 DEAT
+2 DATE 23 NOV 1973
+2 PLAC Artarmon  NSW  Australia
+2 CAUS Heart Failure
+1 EVEN
+2 TYPE Interesting Fact
+2 PLAC Val and Don were second cousins
+1 FAMS @F0003@
+1 FAMC @F0021@
+1 NOTE @NI00008@
+0 @NI00008@ NOTE
+1 CONC In about 1909 Valerie's home was "Gowan Lea", Burlington Road, Homebush
+
+0 @I00009@ INDI
+1 NAME David Arthur Rutledge /Wilcox/
+1 SEX M
+1 BIRT
+2 DATE 14 OCT 1935
+2 PLAC Longueville  NSW  Australia
+1 OCCU
+2 PLAC Insurance/Real Estate Agent
+1 ADDR 2/11 Belmore Street
+2 CONT Crescent Head
+2 CONT NSW
+2 CONT 2440
+2 CONT Australia
+1 PHON (02) 6566 0125  wilcox@@midcoast.com.au
+111 FAMS @F0034@
+1 FAMC @F0003@
+
+0 @I00010@ INDI
+1 NAME Murray Rutledge /Wilcox/
+1 SEX M
+1 BIRT
+2 DATE 17 FEB 1937
+2 PLAC North Sydney  NSW  Australia
+1 DEAT
+2 DATE 8 NOV 2018
+2 PLAC Aboard "Proud Mary"  Murray River  Nildottie  SA  Australia
+1 OCCU
+2 PLAC Judge in the Federal Court of Australia
+1 EVEN
+2 TYPE Degrees/Leters
+2 PLAC AO, QC, LLB
+1 TITL
+2 PLAC Justice
+1 BURI
+2 DATE 24 NOV 2018
+2 PLAC Katoomba Cemetary  Katoomba  NSW
+1 ADDR 5/34 Milson Road
+2 CONT Cremorne Point
+2 CONT NSW
+2 CONT 2090
+2 CONT Australia
+1 PHON (02) 9953 8718  Fax (02) 9904 1835  cmwilcox@@one.net.com.au
+111 FAMS @F0036@
+1 FAMC @F0003@
+1 NOTE @NI00010@
+0 @NI00010@ NOTE
+1 CONC Murray Wilcox: "One of the poets of Australian law"
+
+0 @I00011@ INDI
+1 NAME Geoffrey Rutledge /Wilcox/
+1 SEX M
+1 BIRT
+2 DATE 11 OCT 1939
+2 PLAC Potts Point  NSW  Australia
+1 DEAT
+2 DATE 18 APR 2003
+2 PLAC Sydney  NSW  Australia
+2 CAUS Prostate Cancer
+1 EVEN
+2 TYPE Birth Detail
+2 PLAC Born at St Luke's Hospital
+1 OCCU
+2 PLAC Gardener
+1 BURI
+2 DATE 24 APR 2003
+2 PLAC Macquarie Park Lawn Cemetery  Ryde   NSW
+111 FAMS @F0042@
+1 FAMC @F0003@
+
+0 @I00029@ INDI
+1 NAME (Willi) Wilhelmina /Kleingeld/
+1 SEX F
+1 BIRT
+2 DATE 13 FEB 1935
+2 PLAC 's-Gravenhage  Holland
+1 EVEN
+2 TYPE Ship Arrival
+2 PLAC Arr Sydney on "Johan van Oldenbarnevelt"  21 Jan 1951
+1 EVEN
+2 TYPE Citizenship Note
+2 PLAC Naturalised 3 Oct 1957
+1 ADDR 36 Bondi Street
+2 CONT Tuross Heads
+2 CONT NSW
+2 CONT 2537
+2 CONT Australia
+1 PHON (02) 4473 8607
+111 FAMS @F0014@
+1 FAMC @F0011@
+
+0 @I00044@ INDI
+1 NAME Louis Claude /Louat/
+1 SEX M
+1 BIRT
+2 DATE 5 MAR 1870
+2 PLAC Surry Hills  NSW  Australia
+1 DEAT
+2 DATE 7 NOV 1954
+2 PLAC Artarmon  NSW  Australia
+1 EVEN
+2 TYPE Birth Detail
+2 PLAC Born at home in Botany Street
+1 OCCU
+2 PLAC Mining Engineer
+1 FAMS @F0021@
+111 FAMC @F0023@
+1 NOTE @NI00044@
+0 @NI00044@ NOTE
+1 CONC In the Sands Directory of 1884 there is an entry for Louis Louitt, 
+1 CONC blacksmith at Dock Road, Balmain. Louis certainly lived there at that 
+1 CONC time but he was only 14 and it is not known if he ever learned anything 
+1 CONC about being a blacksmith.
+
+0 @I00045@ INDI
+1 NAME (Daisy) Margaret Ashton /Hunt/
+1 SEX F
+1 BIRT
+2 DATE 18 FEB 1878
+2 PLAC Balmain  NSW  Australia
+1 DEAT
+2 DATE 25 FEB 1956
+2 PLAC Artarmon  NSW  Australia
+222 SOUR @S34732@
+1 FAMS @F0021@
+111 FAMC @F0171@
+
+0 @I00012@ INDI
+1 NAME Arthur Crawshaw /Wilcox/
+1 SEX M
+1 BIRT
+2 DATE 18 DEC 1879
+2 PLAC Surry Hills  NSW  Australia
+2 SOUR Birth Certificate on file
+1 DEAT
+2 DATE 7 SEP 1966
+2 PLAC West Pymble  NSW  Australia
+1 EVEN
+2 TYPE Ship Arrival
+2 PLAC Lived in London 1886-1896 & 1924-1928 and Paris 1896-1900
+1 EVEN
+2 TYPE Birth Detail
+2 PLAC Born at home at Davies Street
+2 SOUR Birth Certificate on file
+1 OCCU
+2 PLAC Textile Importer
+1 FAMS @F0004@
+111 FAMS @F0059@
+111 FAMC @F0002@
+1 NOTE @NI00012@
+0 @NI00012@ NOTE
+1 CONC In 1896 Arthur was sent by his father to Paris to join the firm of 
+1 CONC Debenham & Freebody to learn the lace trade, where he remained for four 
+1 CONC years.
+
+0 @I00013@ INDI
+1 NAME Olive Cowlishaw /Rutledge/
+1 SEX F
+1 BIRT
+2 DATE 12 DEC 1880
+2 PLAC Milton  Queensland  Australia
+1 DEAT
+2 DATE 8 MAR 1948
+2 PLAC Lindfield  NSW  Australia
+1 EVEN
+2 TYPE Birth Detail
+2 PLAC Born at home "Glenallan", Milton
+1 FAMS @F0004@
+111 FAMC @F0126@
+
+0 @I01099@ INDI
+1 NAME Wilhelmus Cornelius /Dullaart/
+1 SEX M
+1 BIRT
+2 DATE 18 JAN 1893
+2 PLAC Delft  Holland
+1 DEAT
+2 DATE 16 APR 1988
+2 PLAC Ermelo den Helder  Holland
+1 OCCU
+2 PLAC Train Driver
+1 BURI
+2 DATE 20 APR 1981
+2 PLAC Heilo  Holland
+1 FAMS @F0398@
+111 FAMS @F0413@
+111 FAMC @F0680@
+
+0 @I01132@ INDI
+1 NAME Antje /Luijendijk/
+1 SEX F
+1 BIRT
+2 DATE 1 MAR 1891
+2 PLAC Delft  Holland
+1 DEAT
+2 DATE 1953
+2 PLAC Den Haag  Holland
+1 FAMS @F0398@
+111 FAMC @F3466@
+
+0 @I01114@ INDI
+1 NAME Jan Willem IJsbrand /Kleingeld/
+1 SEX M
+1 BIRT
+2 DATE 15 JUN 1868
+2 PLAC Leidschendam  Holland
+1 DEAT
+2 DATE 11 AUG 1939
+2 PLAC Leidschendam  Holland
+111 FAMS @F3059@
+1 FAMS @F0406@
+111 FAMC @F3050@
+
+0 @I00407@ INDI
+1 NAME Neeltje /de Kok/
+1 SEX F
+1 BIRT
+2 DATE 14 JUL 1878
+2 PLAC 's-Gravenhage  Holland
+1 DEAT
+2 PLAC Holland
+1 FAMS @F0406@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- FAMILIES
+
 - Oma and Grumbles
 0 @F0001@ FAM
 1 HUSB @I00001@
@@ -424,3 +804,132 @@
 1 EVEN
 2 TYPE Marriage location
 2 PLAC K�benhavn R�dhus (City Hall)
+
+- Tash and Nathan
+0 @F3369@ FAM
+1 HUSB @I09425@
+1 WIFE @I00023@
+1 MARR
+2 DATE 20 OCT 2018
+2 PLAC Fiddletown  NSW  Australia
+
+- Oma's family
+0 @F0011@ FAM
+1 HUSB @I00027@
+1 WIFE @I00028@
+1 CHIL @I00029@
+1 CHIL @I00002@
+1 MARR
+2 DATE 23 JAN 1935
+2 PLAC 's-Gravenhage  Holland
+
+- Grumbles' family
+0 @F0003@ FAM
+1 HUSB @I00007@
+1 WIFE @I00008@
+1 CHIL @I00009@
+1 CHIL @I00010@
+1 CHIL @I00011@
+1 CHIL @I00001@
+1 MARR
+2 DATE 22 DEC 1934
+2 PLAC Sydney  NSW  Australia
+1 NOTE @NF0003@
+0 @NF0003@ NOTE
+1 CONC Married at Wesleyan Church, Pitt Street 
+
+- Jessica's family
+0 @F3458@ FAM
+1 HUSB @I10398@
+1 WIFE @I01969@
+1 MARR
+2 DATE 12 OCT 2019
+2 PLAC Pymble  NSW  Australia
+1 EVEN
+2 TYPE Marriage location
+2 PLAC St Swithuns Anglican Church, Pymble  NSW  Australia
+
+- Grumbles' mum's family
+0 @F0021@ FAM
+1 HUSB @I00044@
+1 WIFE @I00045@
+111 CHIL @I00046@
+111 CHIL @I00047@
+111 CHIL @I00049@
+111 CHIL @I00048@
+1 CHIL @I00008@
+111 CHIL @I00050@
+1 MARR
+2 DATE 18 SEP 1897
+2 PLAC Cobar  NSW  Australia
+
+- Grumbles' dad's family
+0 @F0004@ FAM
+1 HUSB @I00012@
+1 WIFE @I00013@
+1 CHIL @I00007@
+111 CHIL @I00014@
+111 CHIL @I00015@
+1 MARR
+2 DATE 11 APR 1906
+2 PLAC Brisbane  Queensland  Australia
+1 NOTE @NF0004@
+0 @NF0004@ NOTE
+1 CONC
+1 CONT A wedding which created great interest was celebrated on Wednesday week 
+1 CONC in Albert-street Wesleyan Church, the bride being Miss Olive Rutledge, 
+1 CONC third daughter of Sir Arthur and Lady Rutledge,
+1 CONC and the bridegroom Mr. Arthur Crawshaw Wilcox, son of E. M. Wilcox, London.
+
+- Oma's mum's family
+0 @F0398@ FAM
+1 HUSB @I01099@
+1 WIFE @I01132@
+111 CHIL @I01134@
+1 CHIL @I00028@
+111 CHIL @I01135@
+111 CHIL @I01101@
+111 CHIL @I01100@
+1 MARR
+2 PLAC Holland
+1 DIV
+2 DATE ABT. 1938
+1 DIV
+
+- Oma's dad's family
+0 @F0406@ FAM
+1 HUSB @I01114@
+1 WIFE @I00407@
+111 CHIL @I01123@
+111 CHIL @I01124@
+1 CHIL @I00027@
+111 CHIL @I01117@
+111 CHIL @I01115@
+111 CHIL @I08788@
+111 CHIL @I04359@
+111 CHIL @I04361@
+111 CHIL @I01125@
+111 CHIL @I01116@
+1 MARR
+2 DATE 1 JUL 1903
+2 PLAC s'Gravenhage  Holland
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0 @S20390@ SOUR
+1 TITL Index refs 13166 & 15166
+
+0 @S20746@ SOUR
+1 TITL Stanmore is the place of birth

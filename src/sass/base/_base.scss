@@ -13,11 +13,26 @@ body {
   overflow-y: hidden;
   font-family: 'Helvetica', 'Open Sans', sans-serif;
   // font-weight: 800;
-  background-color: #467EA8;
+  background-color: #1C242A;
   color: color.$text;
 }
 
 p, input {
   font-size: 1rem;
   font-weight: normal;
+}
+
+#world_illustration {
+  animation-name: mymove;
+  animation-duration: 30s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+
+@keyframes mymove {
+  from {transform: rotate(360deg);}
+  to {transform: rotate(0deg);}
 }

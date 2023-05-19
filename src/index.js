@@ -86,31 +86,31 @@ const App = () => {
       error={error}
     />
   } else {
-    return (
-      <>
-        {showingRoots &&
-          <>
-            <Controls
-              d3Data={d3Data}
-              // setTimelineShowing={setTimelineShowing}
-              highlightedFamily={highlightedFamily}
-              setHighlightedFamily={setHighlightedFamily}
-              hoveredNode={hoveredNode}
-              view={view}
-              setView={setView}
-            />
-            <Graph
-              d3Data={d3Data}
-              highlightedFamily={highlightedFamily}
-              setHighlightedFamily={setHighlightedFamily}
-              setHoveredNode={setHoveredNode}
-              view={view}
-            />
-          </>
-        }
-      </>
-    )
-  }
+  return (
+    <>
+      {showingRoots &&
+        <>
+          <Controls
+            d3Data={d3Data}
+            // setTimelineShowing={setTimelineShowing}
+            highlightedFamily={highlightedFamily}
+            setHighlightedFamily={setHighlightedFamily}
+            hoveredNode={hoveredNode}
+            view={view}
+            setView={setView}
+          />
+          <Graph
+            d3Data={d3Data}
+            highlightedFamily={highlightedFamily}
+            setHighlightedFamily={setHighlightedFamily}
+            setHoveredNode={setHoveredNode}
+            view={view}
+          />
+        </>
+      }
+    </>
+  )
+}
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
