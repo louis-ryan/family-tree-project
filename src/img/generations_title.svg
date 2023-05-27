@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="859px" height="859px" viewBox="0 0 859 859" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Desktop HD Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-2.5%" y="-4.6%" width="105.0%" height="109.1%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="5" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-2.5%" y="-4.6%" width="105.0%" height="109.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="5" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Desktop-HD-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="HoeflerText-Black, Hoefler Text" font-size="100" font-weight="bold">
+        <g id="Group" transform="translate(130.000000, 264.000000)">
+            <text id="Generations--and--Oc" filter="url(#filter-2)" fill="#FF0084">
+                <tspan x="0.15" y="95">Generations</tspan>
+                <tspan x="222.09" y="215" font-size="60">-and-</tspan>
+                <tspan x="377.91" y="215"></tspan>
+                <tspan x="122.25" y="302" line-spacing="122">Oceans</tspan>
+            </text>
+            <text id="Generations--and--Oc" fill="#FF0084">
+                <tspan x="0.15" y="95">Generations</tspan>
+                <tspan x="222.09" y="215" font-size="60">-and-</tspan>
+                <tspan x="377.91" y="215"></tspan>
+                <tspan x="122.25" y="302" line-spacing="122">Oceans</tspan>
+            </text>
+            <text id="Generations--and--Oc" fill="#FFFFFF">
+                <tspan x="0.15" y="92">Generations</tspan>
+                <tspan x="222.09" y="212" font-size="60">-and-</tspan>
+                <tspan x="377.91" y="212"></tspan>
+                <tspan x="122.25" y="299" line-spacing="122">Oceans</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

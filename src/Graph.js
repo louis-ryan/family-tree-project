@@ -5,6 +5,8 @@ import * as THREE from 'three';
 import SpriteText from 'three-spritetext';
 import { forceCollide } from 'd3-force-3d';
 
+import swim from './audio/padi.mp3';
+
 import louAlEu1 from './img/lou_al_eu/lou-al-eu-trip.png';
 import louAlEu2 from './img/lou_al_eu/IMG_0249.png';
 import louAlEu3 from './img/lou_al_eu/IMG_0306.png';
@@ -27,6 +29,8 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
   const [height, setHeight] = useState(window.innerHeight);
 
   const fgRef = useRef();
+
+
 
   useEffect(() => {
 
@@ -549,38 +553,45 @@ const Graph = ({ d3Data, highlightedFamily, setHighlightedFamily, setHoveredNode
 
 
   // Create graph
-  return <ForceGraph3D
-    ref={fgRef}
-    graphData={d3Data}
+  return (
+    <>
+      <audio autoPlay>
+        <source src={swim} type="audio/mpeg" />
+      </audio>
+      <ForceGraph3D
+        ref={fgRef}
+        graphData={d3Data}
 
-    // Display
-    width={width}
-    height={height}
-    backgroundColor={'#1C242A'}
-    showNavInfo={false}
+        // Display
+        width={width}
+        height={height}
+        backgroundColor={'#1C242A'}
+        showNavInfo={false}
 
-    // Controls
-    controlType={'orbit'}
-    enableNodeDrag={false}
-    onBackgroundClick={clearHighlights}
-    onBackgroundRightClick={clearHighlights}
+        // Controls
+        controlType={'orbit'}
+        enableNodeDrag={false}
+        onBackgroundClick={clearHighlights}
+        onBackgroundRightClick={clearHighlights}
 
-    // Nodes
-    nodeLabel={setNodeLabel}
-    // onNodeHover={setNodeInfo}
-    nodeThreeObject={setNodeThreeObject}
-    onNodeClick={node => showFamily(d3Data, node, highlights)}
-    onNodeRightClick={node => handleRightClick(d3Data, node, highlights)}
+        // Nodes
+        nodeLabel={setNodeLabel}
+        // onNodeHover={setNodeInfo}
+        nodeThreeObject={setNodeThreeObject}
+        onNodeClick={node => showFamily(d3Data, node, highlights)}
+        onNodeRightClick={node => handleRightClick(d3Data, node, highlights)}
 
-    // LINKS
-    linkLabel={setLinkLabel}
-    linkColor={setLinkColor}
-    linkOpacity={1}
-    linkWidth={4}
-    linkDirectionalParticles={link => (link.sourceType != 'CHIL' && link.targetType == 'CHIL' && d3Data.nodes.length < 300) ? 8 : 0}
-    linkDirectionalParticleWidth={setLinkParticleWidth}
-    linkDirectionalParticleSpeed={.001}
-  />
+        // LINKS
+        linkLabel={setLinkLabel}
+        linkColor={setLinkColor}
+        linkOpacity={1}
+        linkWidth={4}
+        linkDirectionalParticles={link => (link.sourceType != 'CHIL' && link.targetType == 'CHIL' && d3Data.nodes.length < 300) ? 8 : 0}
+        linkDirectionalParticleWidth={setLinkParticleWidth}
+        linkDirectionalParticleSpeed={.001}
+      />
+    </>
+  )
 }
 
 export default Graph;

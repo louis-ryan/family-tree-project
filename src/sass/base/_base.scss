@@ -17,22 +17,76 @@ body {
   color: color.$text;
 }
 
-p, input {
+p,
+input {
   font-size: 1rem;
   font-weight: normal;
 }
 
 #world_illustration {
-  animation-name: mymove;
-  animation-duration: 30s;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
+  animation-name: fromdarkness, mymove;
+  animation-duration: 10s, 30s;
+  animation-delay: 0s, 10s;
+  animation-iteration-count: 1, infinite;
   animation-timing-function: linear;
 }
 
+.slide_left {
+  animation-name: slideleft;
+  animation-duration: 20s;
+  animation-delay: 30s;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
 
+.slide_right {
+  animation-name: slideright;
+  animation-duration: 20s;
+  animation-delay: 40s;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+@keyframes slideleft {
+  from {
+    transform: translateX(0px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(-1700px);
+    opacity: 0.8;
+  }
+}
+
+@keyframes slideright {
+  from {
+    transform: translateX(0px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(1700px);
+    opacity: 0.5;
+  }
+}
+
+@keyframes fromdarkness {
+  from {
+    filter: brightness(0);
+  }
+
+  to {
+    filter: brightness(0.5);
+  }
+}
 
 @keyframes mymove {
-  from {transform: rotate(360deg);}
-  to {transform: rotate(0deg);}
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
 }
